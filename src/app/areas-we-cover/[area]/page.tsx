@@ -9,9 +9,13 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 import { CTASection } from "@/components/shared/CTASection";
 import { areas, getAreaBySlug } from "@/lib/areas-data";
 import { services } from "@/lib/services-data";
+import { photos } from "@/lib/photos-data";
 import { buildMetadata } from "@/lib/metadata";
 
 type Params = { area: string };
+
+// Cycled across areas until each has its own confirmed local photography.
+const areaHeroPhotos = [photos.drivewayAfter, photos.gardenPatioHose, photos.patioPressureWashAction];
 
 export function generateStaticParams() {
   return areas.map((area) => ({ area: area.slug }));
@@ -38,6 +42,8 @@ export default async function AreaDetailPage({ params }: { params: Promise<Param
   const area = getAreaBySlug(slug);
   if (!area) notFound();
 
+  const areaIndex = areas.findIndex((item) => item.slug === area.slug);
+
   return (
     <>
       <PageHero
@@ -45,6 +51,7 @@ export default async function AreaDetailPage({ params }: { params: Promise<Param
         title={`Exterior cleaning in ${area.name}`}
         description={area.summary}
         surface="paving"
+        photo={areaHeroPhotos[areaIndex % areaHeroPhotos.length]}
         breadcrumb={[{ label: "Areas We Cover", href: "/areas-we-cover" }, { label: area.name }]}
       />
 

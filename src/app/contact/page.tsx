@@ -5,6 +5,7 @@ import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
 import { siteConfig } from "@/lib/site-config";
+import { photos } from "@/lib/photos-data";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +22,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let's talk about your property"
         description="Whether you have a question or you're ready for a quote, our team is happy to help. Reach out and we'll get back to you as soon as we can."
-        surface="abstract"
+        photo={photos.patioBefore}
         breadcrumb={[{ label: "Contact" }]}
         size="sm"
       />

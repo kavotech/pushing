@@ -6,6 +6,7 @@ import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { CTASection } from "@/components/shared/CTASection";
 import { areas } from "@/lib/areas-data";
+import { photos } from "@/lib/photos-data";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -22,7 +23,7 @@ export default function AreasPage() {
         eyebrow="Coverage"
         title="Areas we cover across London & the South East"
         description="We carry out pressure washing, softwashing and exterior cleaning across four counties — from city apartment blocks to estate properties and business premises."
-        surface="abstract"
+        photo={photos.gardenPatioHose}
         breadcrumb={[{ label: "Areas We Cover" }]}
       />
 

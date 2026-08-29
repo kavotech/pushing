@@ -5,6 +5,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { CTASection } from "@/components/shared/CTASection";
 import { services } from "@/lib/services-data";
+import { photos } from "@/lib/photos-data";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +22,7 @@ export default function ServicesPage() {
         eyebrow="Our Services"
         title="Exterior cleaning services for every property"
         description="Seven specialist services covering domestic, communal, estate and commercial properties across London, Surrey, Essex and Kent — each matched to the surface and job at hand."
-        surface="paving"
+        photo={photos.patioPressureWashAction}
         breadcrumb={[{ label: "Services" }]}
       />
 

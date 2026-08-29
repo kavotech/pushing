@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Container } from "@/components/shared/Container";
 import { MediaPanel, type Surface } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
+import type { Photo as PhotoData } from "@/lib/photos-data";
 import { cn } from "@/lib/cn";
 
 export function PageHero({
@@ -9,6 +11,7 @@ export function PageHero({
   title,
   description,
   surface = "abstract",
+  photo,
   breadcrumb,
   size = "md",
 }: {
@@ -16,6 +19,8 @@ export function PageHero({
   title: React.ReactNode;
   description?: React.ReactNode;
   surface?: Surface;
+  /** Real photo to use as the banner background instead of the generated surface. */
+  photo?: PhotoData;
   breadcrumb?: { label: string; href?: string }[];
   size?: "sm" | "md";
 }) {
@@ -26,9 +31,18 @@ export function PageHero({
         size === "md" ? "lg:pt-48 lg:pb-24" : "lg:pt-44 lg:pb-16",
       )}
     >
-      <MediaPanel surface={surface} tone="dusk" className="absolute inset-0" />
+      {photo ? (
+        <Photo photo={photo} priority sizes="100vw" className="absolute inset-0" />
+      ) : (
+        <MediaPanel surface={surface} tone="dusk" className="absolute inset-0" />
+      )}
       <div className="absolute inset-0 bg-[radial-gradient(90%_60%_at_50%_0%,rgba(20,135,223,0.16),transparent_60%)]" />
-      <div className="absolute inset-0 bg-linear-to-t from-ink-950 via-ink-950/80 to-ink-950/40" />
+      <div
+        className={cn(
+          "absolute inset-0 bg-linear-to-t from-ink-950 via-ink-950/80 to-ink-950/40",
+          photo && "via-ink-950/85 to-ink-950/55",
+        )}
+      />
 
       <Container className="relative">
         {breadcrumb ? (

@@ -1,9 +1,13 @@
+import { photos, type Photo } from "./photos-data";
+
 export type Guide = {
   slug: string;
   title: string;
   excerpt: string;
   readTime: string;
   surface: "paving" | "render" | "roof" | "brick" | "decking" | "abstract";
+  /** Real photo to use instead of the generated surface, where one fits the topic. */
+  photo?: Photo;
   content: string[];
 };
 
@@ -15,6 +19,7 @@ export const guides: Guide[] = [
       "Moss, algae and general grime build up faster than most homeowners expect. Here's a sensible guide to timing your next clean.",
     readTime: "4 min read",
     surface: "paving",
+    photo: photos.drivewayBefore,
     content: [
       "There's no single answer that fits every driveway — how quickly dirt, moss and algae build up depends on the material, how shaded the area is, and what's growing nearby. That said, most homeowners find an annual clean keeps a driveway looking its best without letting grime become deeply ingrained.",
       "Shaded, north-facing or tree-lined driveways tend to hold moisture longer, which speeds up algae and moss growth. If your driveway rarely sees direct sun, it may be worth cleaning it every six to nine months rather than waiting a full year.",
@@ -30,6 +35,7 @@ export const guides: Guide[] = [
       "Both methods clean exterior surfaces, but using the wrong one on the wrong surface can cause real damage. Here's how to tell them apart.",
     readTime: "5 min read",
     surface: "render",
+    photo: photos.patioPressureWashAction,
     content: [
       "Pressure washing and softwashing are often mentioned in the same breath, but they work in fundamentally different ways — and using the wrong method on the wrong surface can do more harm than good.",
       "Pressure washing uses high-pressure water to physically blast dirt, algae and staining off a surface. It's highly effective on hard, durable materials like block paving, concrete, natural stone and tarmac, where the surface can handle the force involved.",

@@ -5,6 +5,7 @@ import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
 import { siteConfig } from "@/lib/site-config";
+import { photos } from "@/lib/photos-data";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -27,7 +28,7 @@ export default function QuotePage() {
         eyebrow="Free Quote"
         title="Get a free, no-obligation quote"
         description="Tell us a little about your property and the areas you'd like cleaned. We'll come back with a clear quote — no pressure, no obligation."
-        surface="paving"
+        photo={photos.drivewayAfter}
         breadcrumb={[{ label: "Get A Free Quote" }]}
         size="sm"
       />

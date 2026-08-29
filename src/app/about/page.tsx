@@ -3,17 +3,11 @@ import { Container } from "@/components/shared/Container";
 import { PageHero } from "@/components/shared/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { MediaPanel } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
 import { CTASection } from "@/components/shared/CTASection";
 import { buildMetadata } from "@/lib/metadata";
-import {
-  Building2,
-  Droplets,
-  Handshake,
-  MapPinned,
-  ShieldCheck,
-  Wrench,
-} from "lucide-react";
+import { photos } from "@/lib/photos-data";
+import { Handshake, MapPinned, ShieldCheck, Wrench } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
@@ -56,7 +50,7 @@ export default function AboutPage() {
         eyebrow="About Pushing Pressure"
         title="Professional exterior cleaning, done properly"
         description="Pushing Pressure LTD provides professional exterior cleaning solutions for residential, communal, estate and commercial properties across London and the South East."
-        surface="render"
+        photo={photos.patioPressureWashAction}
         breadcrumb={[{ label: "About" }]}
       />
 
@@ -64,7 +58,7 @@ export default function AboutPage() {
         <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.35)] sm:aspect-[5/4] lg:aspect-[4/5]">
-              <MediaPanel surface="brick" tone="brand" icon={Building2} className="absolute inset-0" />
+              <Photo photo={photos.gardenPatioHose} className="absolute inset-0" />
             </div>
           </Reveal>
 
@@ -132,8 +126,8 @@ export default function AboutPage() {
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.3)]">
-              <MediaPanel surface="abstract" tone="brand" icon={Droplets} className="relative aspect-[16/10]" />
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.3)]">
+              <Photo photo={photos.drivewayAfter} className="absolute inset-0" />
             </div>
           </Reveal>
         </Container>

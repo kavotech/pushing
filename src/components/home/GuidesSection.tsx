@@ -4,6 +4,7 @@ import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { MediaPanel } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
 import { guides } from "@/lib/guides-data";
 
 export function GuidesSection() {
@@ -27,7 +28,11 @@ export function GuidesSection() {
                 className="focus-ring group flex h-full flex-col overflow-hidden rounded-xl border border-ink-100 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <MediaPanel surface={guide.surface} tone="brand" className="absolute inset-0" />
+                  {guide.photo ? (
+                    <Photo photo={guide.photo} className="absolute inset-0" />
+                  ) : (
+                    <MediaPanel surface={guide.surface} tone="brand" className="absolute inset-0" />
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-600">

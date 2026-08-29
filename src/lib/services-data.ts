@@ -8,6 +8,7 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
+import { photos, type Photo } from "./photos-data";
 
 export type ServiceFaq = {
   question: string;
@@ -32,6 +33,8 @@ export type Service = {
   process: ServiceStep[];
   benefits: string[];
   faqs: ServiceFaq[];
+  /** Real photo to use instead of the generated surface, where one fits the service. */
+  photo?: Photo;
 };
 
 export const services: Service[] = [
@@ -40,6 +43,7 @@ export const services: Service[] = [
     name: "Pressure Washing / Jetwashing",
     shortName: "Pressure Washing",
     icon: Droplets,
+    photo: photos.drivewayAfter,
     tagline: "High-pressure cleaning for hard exterior surfaces",
     summary:
       "High-powered jetwashing that lifts ingrained dirt, grime and staining from driveways, patios and hard landscaping.",
@@ -247,6 +251,7 @@ export const services: Service[] = [
     name: "Estate Cleaning",
     shortName: "Estate Cleaning",
     icon: Building2,
+    photo: photos.patioPressureWashAction,
     tagline: "Grounds and exterior cleaning for estates",
     summary:
       "Coordinated exterior cleaning across driveways, boundary walls, pathways and shared grounds for larger estate properties.",
@@ -454,6 +459,7 @@ export const services: Service[] = [
     name: "Domestic Exterior Cleaning",
     shortName: "Domestic",
     icon: Home,
+    photo: photos.gardenPatioHose,
     tagline: "Exterior cleaning for homes and gardens",
     summary:
       "Complete exterior cleaning for homes — driveways, patios, walls and decking, restoring a fresh, well-cared-for finish.",

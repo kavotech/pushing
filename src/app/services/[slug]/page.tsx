@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { CTASection } from "@/components/shared/CTASection";
 import { MediaPanel, type Surface } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
 import { getServiceBySlug, services } from "@/lib/services-data";
 import { buildMetadata } from "@/lib/metadata";
 import { faqSchema, serviceSchema } from "@/lib/schema";
@@ -80,6 +81,7 @@ export default async function ServiceDetailPage({
         title={service.name}
         description={service.heroDescription}
         surface={surfaceBySlug[service.slug] ?? "abstract"}
+        photo={service.photo}
         breadcrumb={[{ label: "Services", href: "/services" }, { label: service.shortName }]}
       />
 
@@ -142,12 +144,16 @@ export default async function ServiceDetailPage({
           <div className="space-y-6">
             <Reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.3)]">
-                <MediaPanel
-                  surface={surfaceBySlug[service.slug] ?? "abstract"}
-                  tone="after"
-                  icon={Icon}
-                  className="absolute inset-0"
-                />
+                {service.photo ? (
+                  <Photo photo={service.photo} className="absolute inset-0" />
+                ) : (
+                  <MediaPanel
+                    surface={surfaceBySlug[service.slug] ?? "abstract"}
+                    tone="after"
+                    icon={Icon}
+                    className="absolute inset-0"
+                  />
+                )}
               </div>
             </Reveal>
 

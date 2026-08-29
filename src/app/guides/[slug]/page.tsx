@@ -42,6 +42,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
         title={guide.title}
         description={guide.excerpt}
         surface={guide.surface}
+        photo={guide.photo}
         breadcrumb={[{ label: "Guides", href: "/guides" }, { label: guide.title }]}
         size="sm"
       />
