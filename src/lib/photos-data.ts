@@ -72,6 +72,42 @@ export const photos: Record<string, Photo> = {
     alt: "Herringbone block paved driveway before cleaning, with ingrained dirt and weeds",
     focus: "center 55%",
   },
+  frontGardenDrivewayBefore: {
+    id: "front-garden-driveway-before",
+    src: "/photos/front-garden-driveway-before.jpg",
+    alt: "Front garden brick driveway before cleaning, with dark weathered staining",
+    focus: "center 55%",
+  },
+  frontGardenDrivewayAfter: {
+    id: "front-garden-driveway-after",
+    src: "/photos/front-garden-driveway-after.jpg",
+    alt: "Front garden brick driveway after a professional clean",
+    focus: "center 55%",
+  },
+  porchDrivewayAfter: {
+    id: "porch-driveway-after-clean",
+    src: "/photos/porch-driveway-after-clean.jpg",
+    alt: "Driveway of a large house with a covered porch, after a professional clean",
+    focus: "center 55%",
+  },
+  flagstonePatioRotaryCleaner: {
+    id: "flagstone-patio-rotary-cleaner",
+    src: "/photos/flagstone-patio-rotary-cleaner.jpg",
+    alt: "Flagstone patio being cleaned with a rotary surface cleaner attachment",
+    focus: "65% 42%",
+  },
+  flagstonePatioHoseReel: {
+    id: "flagstone-patio-hose-reel",
+    src: "/photos/flagstone-patio-hose-reel.jpg",
+    alt: "Flagstone patio mid-clean, with the pressure washer hose reeled out",
+    focus: "center 45%",
+  },
+  heroDrivewaySupercar: {
+    id: "hero-driveway-supercar-clean",
+    src: "/photos/hero-driveway-supercar-clean.jpg",
+    alt: "Pushing Pressure team member pressure washing a resin driveway outside a large modern home",
+    focus: "center 55%",
+  },
 };
 
 export const photoList = Object.values(photos);
@@ -93,5 +129,10 @@ export const photoPairs: { title: string; before: Photo; after: Photo }[] = [
     title: "Herringbone Driveway",
     before: photos.herringboneDrivewayBefore,
     after: photos.herringboneDrivewayAfter,
+  },
+  {
+    title: "Front Garden Driveway",
+    before: photos.frontGardenDrivewayBefore,
+    after: photos.frontGardenDrivewayAfter,
   },
 ];

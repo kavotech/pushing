@@ -28,7 +28,7 @@ export default function QuotePage() {
         eyebrow="Free Quote"
         title="Get a free, no-obligation quote"
         description="Tell us a little about your property and the areas you'd like cleaned. We'll come back with a clear quote — no pressure, no obligation."
-        photo={photos.drivewayAfter}
+        photo={photos.porchDrivewayAfter}
         breadcrumb={[{ label: "Get A Free Quote" }]}
         size="sm"
       />

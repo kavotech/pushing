@@ -21,6 +21,7 @@ const recentWork = [
   { photo: photos.patioPressureWashAction, caption: "Pressure washing a garden patio" },
   { photo: photos.gardenPatioHose, caption: "Garden patio and path, cleaned" },
   { photo: photos.detachedDrivewayAfter, caption: "Driveway and courtyard, after cleaning" },
+  { photo: photos.flagstonePatioRotaryCleaner, caption: "Flagstone patio, cleaned with a surface cleaner" },
   { photo: photos.patioDuringClean, caption: "Rear garden patio, mid-clean" },
   { photo: photos.patioBefore, caption: "Rear garden patio, before cleaning" },
 ];
