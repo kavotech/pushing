@@ -35,7 +35,7 @@ export default function GuidesPage() {
               <Reveal key={guide.slug} delay={index * 0.06}>
                 <Link
                   href={`/guides/${guide.slug}`}
-                  className="focus-ring group flex h-full flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_1px_2px_rgba(10,24,48,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_16px_40px_-16px_rgba(10,24,48,0.18)]"
+                  className="focus-ring group flex h-full flex-col overflow-hidden rounded-xl border border-ink-100 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)]"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <MediaPanel surface={guide.surface} tone="brand" className="absolute inset-0" />

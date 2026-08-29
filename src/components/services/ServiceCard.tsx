@@ -10,22 +10,23 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
     <Link
       href={`/services/${service.slug}`}
       className={cn(
-        "focus-ring group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-ink-100 bg-white p-7 shadow-[0_1px_2px_rgba(10,24,48,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_16px_40px_-16px_rgba(10,24,48,0.18)]",
+        "focus-ring group relative flex flex-col justify-between overflow-hidden rounded-xl border border-ink-100 bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)]",
       )}
       style={{ transitionDelay: `${Math.min(index, 6) * 20}ms` }}
     >
       <div>
-        <div className="flex size-14 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors duration-300 group-hover:bg-blue-500 group-hover:text-white">
-          <Icon className="size-6" strokeWidth={1.6} />
-        </div>
+        <Icon
+          className="size-8 text-blue-600 transition-transform duration-300 group-hover:scale-110"
+          strokeWidth={1.5}
+        />
 
-        <h3 className="mt-6 text-xl font-semibold text-ink-900">{service.name}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-ink-500">{service.summary}</p>
+        <h3 className="mt-4 text-lg font-semibold text-ink-900">{service.name}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-ink-500">{service.summary}</p>
       </div>
 
-      <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-blue-600">
+      <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-blue-600">
         Learn more
-        <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+        <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1" />
       </div>
     </Link>
   );

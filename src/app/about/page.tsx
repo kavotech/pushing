@@ -110,11 +110,9 @@ export default function AboutPage() {
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.06}>
-                <div className="h-full rounded-2xl border border-ink-100 bg-white p-6 shadow-[0_1px_2px_rgba(10,24,48,0.04)]">
-                  <div className="flex size-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                    <value.icon className="size-5" strokeWidth={1.7} />
-                  </div>
-                  <h3 className="mt-5 text-base font-semibold text-ink-900">{value.title}</h3>
+                <div className="h-full rounded-xl border border-ink-100 bg-white p-6">
+                  <value.icon className="size-8 text-blue-600" strokeWidth={1.5} />
+                  <h3 className="mt-4 text-base font-semibold text-ink-900">{value.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-500">{value.description}</p>
                 </div>
               </Reveal>

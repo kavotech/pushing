@@ -33,12 +33,10 @@ export default function AreasPage() {
               <Reveal key={area.slug} delay={index * 0.06}>
                 <Link
                   href={`/areas-we-cover/${area.slug}`}
-                  className="focus-ring group flex h-full flex-col rounded-2xl border border-ink-100 bg-white p-7 shadow-[0_1px_2px_rgba(10,24,48,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_16px_40px_-16px_rgba(10,24,48,0.18)]"
+                  className="focus-ring group flex h-full flex-col rounded-xl border border-ink-100 bg-white p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)]"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="flex size-12 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                      <MapPin className="size-5" />
-                    </span>
+                  <div className="flex items-center gap-2.5">
+                    <MapPin className="size-6 text-blue-600" strokeWidth={1.5} />
                     <h2 className="text-2xl font-semibold text-ink-900">{area.name}</h2>
                   </div>
                   <p className="mt-4 text-sm leading-relaxed text-ink-500 sm:text-base">

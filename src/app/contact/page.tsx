@@ -92,8 +92,8 @@ function ContactCard({
   return (
     <div className="rounded-2xl border border-ink-100 bg-mist-50 p-6">
       <div className="flex items-center gap-3">
-        <span className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-          <Icon className="size-4" />
+        <span className="flex size-9 items-center justify-center rounded-full border border-blue-200 text-blue-600">
+          <Icon className="size-4" strokeWidth={1.5} />
         </span>
         <h3 className="text-base font-semibold text-ink-900">{title}</h3>
       </div>

@@ -87,9 +87,7 @@ export default async function ServiceDetailPage({
         <Container className="grid grid-cols-1 gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
             <Reveal>
-              <div className="flex size-14 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                <Icon className="size-6" strokeWidth={1.6} />
-              </div>
+              <Icon className="size-9 text-blue-600" strokeWidth={1.5} />
               <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-600 sm:text-lg">
                 {service.overview.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>

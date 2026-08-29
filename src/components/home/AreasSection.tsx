@@ -23,18 +23,16 @@ export function AreasSection() {
             <Reveal key={area.slug} delay={index * 0.06}>
               <Link
                 href={`/areas-we-cover/${area.slug}`}
-                className="focus-ring group flex h-full flex-col justify-between rounded-2xl border border-ink-100 bg-white p-6 shadow-[0_1px_2px_rgba(10,24,48,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_16px_40px_-16px_rgba(10,24,48,0.18)]"
+                className="focus-ring group flex h-full flex-col justify-between rounded-xl border border-ink-100 bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)]"
               >
-                <div className="flex items-center gap-3">
-                  <span className="flex size-11 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                    <MapPin className="size-5" />
-                  </span>
+                <div className="flex items-center gap-2.5">
+                  <MapPin className="size-5 text-blue-600" strokeWidth={1.5} />
                   <span className="text-lg font-semibold text-ink-900">{area.name}</span>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-ink-500">{area.summary}</p>
-                <span className="mt-6 flex items-center gap-1.5 text-sm font-semibold text-blue-600">
+                <p className="mt-3 text-sm leading-relaxed text-ink-500">{area.summary}</p>
+                <span className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-blue-600">
                   View coverage
-                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </Link>
             </Reveal>

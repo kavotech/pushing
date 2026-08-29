@@ -47,8 +47,8 @@ export function ProcessSection() {
           <div className="mt-10 space-y-7">
             {steps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.08} className="flex gap-4">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                  <step.icon className="size-5" strokeWidth={1.7} />
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-full border border-blue-200 text-blue-600">
+                  <step.icon className="size-4" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="text-base font-semibold text-ink-900">
@@ -69,8 +69,8 @@ export function ProcessSection() {
             <MediaPanel surface="roof" tone="after" className="absolute inset-0" />
           </div>
           <div className="absolute -bottom-6 -left-6 flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-4 shadow-[0_16px_40px_-16px_rgba(10,24,48,0.25)]">
-            <span className="flex size-11 items-center justify-center rounded-full bg-lime-100 text-lime-700">
-              <CircleCheckBig className="size-5" />
+            <span className="flex size-10 items-center justify-center rounded-full border border-lime-300 text-lime-600">
+              <CircleCheckBig className="size-5" strokeWidth={1.5} />
             </span>
             <div>
               <p className="text-sm font-semibold text-ink-900">Job Done Properly</p>
