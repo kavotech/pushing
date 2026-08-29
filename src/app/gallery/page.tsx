@@ -7,7 +7,7 @@ import { Photo } from "@/components/shared/Photo";
 import { BeforeAfterSlider } from "@/components/shared/BeforeAfterSlider";
 import { CTASection } from "@/components/shared/CTASection";
 import { buildMetadata } from "@/lib/metadata";
-import { photos } from "@/lib/photos-data";
+import { photos, photoPairs } from "@/lib/photos-data";
 import type { Surface } from "@/components/shared/MediaPanel";
 
 export const metadata: Metadata = buildMetadata({
@@ -20,13 +20,12 @@ export const metadata: Metadata = buildMetadata({
 const recentWork = [
   { photo: photos.patioPressureWashAction, caption: "Pressure washing a garden patio" },
   { photo: photos.gardenPatioHose, caption: "Garden patio and path, cleaned" },
-  { photo: photos.drivewayAfter, caption: "Herringbone driveway, after cleaning" },
-  { photo: photos.drivewayBefore, caption: "Block paved driveway, before cleaning" },
+  { photo: photos.detachedDrivewayAfter, caption: "Driveway and courtyard, after cleaning" },
+  { photo: photos.patioDuringClean, caption: "Rear garden patio, mid-clean" },
   { photo: photos.patioBefore, caption: "Rear garden patio, before cleaning" },
 ];
 
 const projects: { surface: Surface; title: string; category: string }[] = [
-  { surface: "paving", title: "Block Paved Driveway", category: "Pressure Washing" },
   { surface: "render", title: "Render Softwash", category: "Softwashing" },
   { surface: "roof", title: "Roof Tile Softwash", category: "Softwashing" },
   { surface: "brick", title: "Boundary Wall Clean", category: "Estate Cleaning" },
@@ -34,7 +33,6 @@ const projects: { surface: Surface; title: string; category: string }[] = [
   { surface: "paving", title: "Communal Walkway", category: "Communal Area Cleaning" },
   { surface: "abstract", title: "Commercial Forecourt", category: "Commercial Cleaning" },
   { surface: "brick", title: "Shopfront Surround", category: "Commercial Cleaning" },
-  { surface: "paving", title: "Estate Access Road", category: "Estate Cleaning" },
 ];
 
 export default function GalleryPage() {
@@ -70,6 +68,27 @@ export default function GalleryPage() {
       </section>
 
       <section className="border-t border-ink-100 bg-mist-50 py-20 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Real Before & After"
+              title="Real jobs, drag to compare"
+              description="Genuine before and after photos from the same property — nothing generated or staged."
+              tone="light"
+            />
+          </Reveal>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {photoPairs.map((pair, index) => (
+              <Reveal key={pair.title} delay={index * 0.08}>
+                <BeforeAfterSlider before={pair.before} after={pair.after} title={pair.title} />
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-20 sm:py-24">
         <Container>
           <Reveal>
             <SectionHeading

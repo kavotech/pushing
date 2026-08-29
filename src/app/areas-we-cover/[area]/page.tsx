@@ -15,7 +15,12 @@ import { buildMetadata } from "@/lib/metadata";
 type Params = { area: string };
 
 // Cycled across areas until each has its own confirmed local photography.
-const areaHeroPhotos = [photos.drivewayAfter, photos.gardenPatioHose, photos.patioPressureWashAction];
+const areaHeroPhotos = [
+  photos.drivewayAfter,
+  photos.gardenPatioHose,
+  photos.patioPressureWashAction,
+  photos.herringboneDrivewayAfter,
+];
 
 export function generateStaticParams() {
   return areas.map((area) => ({ area: area.slug }));

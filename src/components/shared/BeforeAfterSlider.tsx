@@ -3,17 +3,20 @@
 import { useCallback, useRef, useState } from "react";
 import { MoveHorizontal } from "lucide-react";
 import { MediaPanel, type Surface } from "./MediaPanel";
+import { Photo } from "./Photo";
+import type { Photo as PhotoData } from "@/lib/photos-data";
 import { cn } from "@/lib/cn";
 
-export function BeforeAfterSlider({
-  surface,
-  title,
-  className,
-}: {
-  surface: Surface;
+type BeforeAfterSliderProps = {
   title: string;
   className?: string;
-}) {
+} & ({ surface: Surface; before?: never; after?: never } | {
+  surface?: never;
+  before: PhotoData;
+  after: PhotoData;
+});
+
+export function BeforeAfterSlider({ title, className, ...media }: BeforeAfterSliderProps) {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
@@ -46,13 +49,36 @@ export function BeforeAfterSlider({
         dragging.current = false;
       }}
     >
-      <MediaPanel surface={surface} tone="after" className="absolute inset-0" label="After" />
+      {media.surface ? (
+        <MediaPanel surface={media.surface} tone="after" className="absolute inset-0" label="After" />
+      ) : (
+        <>
+          <Photo photo={media.after} className="absolute inset-0" />
+          <span className="absolute right-4 top-4 rounded-full border border-white/15 bg-ink-950/50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/70 backdrop-blur-sm">
+            After
+          </span>
+        </>
+      )}
 
       <div
         className="absolute inset-0 overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
       >
-        <MediaPanel surface={surface} tone="before" className="absolute inset-0 h-full w-full" label="Before" />
+        {media.surface ? (
+          <MediaPanel
+            surface={media.surface}
+            tone="before"
+            className="absolute inset-0 h-full w-full"
+            label="Before"
+          />
+        ) : (
+          <div className="absolute inset-0 h-full w-full">
+            <Photo photo={media.before} className="absolute inset-0" />
+            <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-ink-950/50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/70 backdrop-blur-sm">
+              Before
+            </span>
+          </div>
+        )}
       </div>
 
       <div

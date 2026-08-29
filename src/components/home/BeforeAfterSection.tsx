@@ -3,9 +3,9 @@ import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { BeforeAfterSlider } from "@/components/shared/BeforeAfterSlider";
 import { Button } from "@/components/shared/Button";
+import { photoPairs } from "@/lib/photos-data";
 
 const examples = [
-  { surface: "paving" as const, title: "Driveway Pressure Wash" },
   { surface: "render" as const, title: "Render Softwash" },
   { surface: "roof" as const, title: "Roof Softwash" },
 ];
@@ -18,14 +18,21 @@ export function BeforeAfterSection() {
           <SectionHeading
             eyebrow="See The Difference"
             title="Before & After"
-            description="Drag the slider to see the kind of transformation a professional exterior clean delivers. Real project photography is added to this gallery as jobs are completed."
+            description="Drag the slider to see the kind of transformation a professional exterior clean delivers — real project photography, plus example results as more jobs are photographed."
             tone="light"
           />
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <Reveal delay={0}>
+            <BeforeAfterSlider
+              before={photoPairs[0].before}
+              after={photoPairs[0].after}
+              title={photoPairs[0].title}
+            />
+          </Reveal>
           {examples.map((example, index) => (
-            <Reveal key={example.title} delay={index * 0.08}>
+            <Reveal key={example.title} delay={(index + 1) * 0.08}>
               <BeforeAfterSlider surface={example.surface} title={example.title} />
             </Reveal>
           ))}

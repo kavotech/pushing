@@ -42,6 +42,56 @@ export const photos: Record<string, Photo> = {
     alt: "Herringbone block paved driveway after a professional clean",
     focus: "center 55%",
   },
+  driveway94After: {
+    id: "driveway-94-after-clean",
+    src: "/photos/driveway-94-after-clean.jpg",
+    alt: "Block paved driveway after a professional clean, with steps up to the front door",
+    focus: "center 60%",
+  },
+  patioDuringClean: {
+    id: "patio-during-clean",
+    src: "/photos/patio-during-clean.jpg",
+    alt: "Rear garden patio being pressure washed, with a clean strip cut through the grime",
+    focus: "center 45%",
+  },
+  detachedDrivewayAfter: {
+    id: "detached-driveway-after-clean",
+    src: "/photos/detached-driveway-after-clean.jpg",
+    alt: "Brick paved driveway and courtyard of a large detached house after cleaning",
+    focus: "center 55%",
+  },
+  herringboneDrivewayAfter: {
+    id: "herringbone-driveway-after-clean",
+    src: "/photos/herringbone-driveway-after-clean.jpg",
+    alt: "Herringbone block paved driveway after a professional clean",
+    focus: "center 55%",
+  },
+  herringboneDrivewayBefore: {
+    id: "herringbone-driveway-before-clean",
+    src: "/photos/herringbone-driveway-before-clean.jpg",
+    alt: "Herringbone block paved driveway before cleaning, with ingrained dirt and weeds",
+    focus: "center 55%",
+  },
 };
 
 export const photoList = Object.values(photos);
+
+/**
+ * Confirmed same-site before/after pairs only — real photos are paired here
+ * exclusively when both shots are unambiguously the same location, so the
+ * real before/after slider never implies a transformation that didn't
+ * happen. Photos without a confirmed match stay standalone (see the
+ * "Recent Work" grid on the gallery page).
+ */
+export const photoPairs: { title: string; before: Photo; after: Photo }[] = [
+  {
+    title: "Block Paved Driveway",
+    before: photos.drivewayBefore,
+    after: photos.driveway94After,
+  },
+  {
+    title: "Herringbone Driveway",
+    before: photos.herringboneDrivewayBefore,
+    after: photos.herringboneDrivewayAfter,
+  },
+];

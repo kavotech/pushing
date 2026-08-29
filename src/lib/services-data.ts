@@ -251,7 +251,7 @@ export const services: Service[] = [
     name: "Estate Cleaning",
     shortName: "Estate Cleaning",
     icon: Building2,
-    photo: photos.patioPressureWashAction,
+    photo: photos.detachedDrivewayAfter,
     tagline: "Grounds and exterior cleaning for estates",
     summary:
       "Coordinated exterior cleaning across driveways, boundary walls, pathways and shared grounds for larger estate properties.",
