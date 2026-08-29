@@ -22,9 +22,9 @@ export default function PrivacyPolicyPage() {
         size="sm"
       />
 
-      <section className="bg-ink-950 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
-          <div className="prose prose-invert max-w-3xl prose-headings:font-display prose-a:text-blue-300">
+          <div className="prose max-w-3xl prose-headings:font-display prose-a:text-blue-600">
             <p>
               <strong>Last updated:</strong> This policy explains how {siteConfig.legalName}
               (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) collects, uses and protects

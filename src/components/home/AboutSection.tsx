@@ -14,14 +14,15 @@ const points = [
 
 export function AboutSection() {
   return (
-    <section className="relative bg-ink-900 py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-28">
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 lg:order-1">
           <SectionHeading
             eyebrow="About Pushing Pressure"
             title="Built for exterior cleaning that's done properly"
+            tone="light"
           />
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-200 sm:text-lg">
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-500 sm:text-lg">
             <p>
               Pushing Pressure LTD provides professional exterior cleaning solutions for
               residential, communal, estate and commercial properties across London and the
@@ -37,8 +38,8 @@ export function AboutSection() {
 
           <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {points.map((point) => (
-              <li key={point} className="flex items-start gap-2.5 text-sm text-ink-200">
-                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-lime-300" />
+              <li key={point} className="flex items-start gap-2.5 text-sm text-ink-700">
+                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-blue-500" />
                 {point}
               </li>
             ))}
@@ -51,8 +52,12 @@ export function AboutSection() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="order-1 lg:order-2">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-white/10 sm:aspect-[5/4] lg:aspect-[4/5]">
+        <Reveal delay={0.1} className="relative order-1 lg:order-2">
+          <div
+            aria-hidden
+            className="absolute -inset-4 hidden rounded-[2.5rem] bg-linear-to-br from-blue-100 to-lime-100 sm:block"
+          />
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.35)] sm:aspect-[5/4] lg:aspect-[4/5]">
             <MediaPanel surface="render" tone="brand" className="absolute inset-0" />
             <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/10 bg-ink-950/70 p-5 backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-wider text-lime-300">

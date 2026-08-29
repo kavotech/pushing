@@ -25,7 +25,7 @@ export default function ServicesPage() {
         breadcrumb={[{ label: "Services" }]}
       />
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (

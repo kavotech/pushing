@@ -12,13 +12,14 @@ const examples = [
 
 export function BeforeAfterSection() {
   return (
-    <section className="relative bg-ink-950 py-24 sm:py-28">
+    <section className="relative bg-mist-50 py-24 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading
             eyebrow="See The Difference"
             title="Before & After"
             description="Drag the slider to see the kind of transformation a professional exterior clean delivers. Real project photography is added to this gallery as jobs are completed."
+            tone="light"
           />
         </Reveal>
 

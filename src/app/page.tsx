@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
-import { TrustStrip } from "@/components/home/TrustStrip";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { AboutSection } from "@/components/home/AboutSection";
+import { WhyChooseSection } from "@/components/home/WhyChooseSection";
+import { ProcessSection } from "@/components/home/ProcessSection";
 import { BeforeAfterSection } from "@/components/home/BeforeAfterSection";
 import { AreasSection } from "@/components/home/AreasSection";
-import { ProcessSection } from "@/components/home/ProcessSection";
-import { WhyChooseSection } from "@/components/home/WhyChooseSection";
+import { GuidesSection } from "@/components/home/GuidesSection";
 import { CTASection } from "@/components/shared/CTASection";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -21,13 +21,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <TrustStrip />
-      <ServicesSection />
       <AboutSection />
+      <ServicesSection />
+      <WhyChooseSection />
+      <ProcessSection />
       <BeforeAfterSection />
       <AreasSection />
-      <ProcessSection />
-      <WhyChooseSection />
+      <GuidesSection />
       <CTASection />
     </>
   );

@@ -22,9 +22,9 @@ export default function TermsPage() {
         size="sm"
       />
 
-      <section className="bg-ink-950 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
-          <div className="prose prose-invert max-w-3xl prose-headings:font-display prose-a:text-blue-300">
+          <div className="prose max-w-3xl prose-headings:font-display prose-a:text-blue-600">
             <p>
               These terms and conditions apply to your use of this website and to any cleaning
               services booked with {siteConfig.legalName}. By using this website or booking

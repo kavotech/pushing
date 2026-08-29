@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en-GB"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full scroll-smooth`}
     >
-      <body className="flex min-h-full flex-col bg-ink-950 text-mist-50">
+      <body className="flex min-h-full flex-col bg-white text-ink-900">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}

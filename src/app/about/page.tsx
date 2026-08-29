@@ -60,10 +60,10 @@ export default function AboutPage() {
         breadcrumb={[{ label: "About" }]}
       />
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 sm:aspect-[5/4] lg:aspect-[4/5]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.35)] sm:aspect-[5/4] lg:aspect-[4/5]">
               <MediaPanel surface="brick" tone="brand" icon={Building2} className="absolute inset-0" />
             </div>
           </Reveal>
@@ -72,8 +72,9 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Who We Are"
               title="Exterior cleaning built around your property"
+              tone="light"
             />
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-200 sm:text-lg">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-600 sm:text-lg">
               <p>
                 Pushing Pressure LTD focuses exclusively on exterior cleaning — pressure washing,
                 softwashing, gutter clearing and the wider work that keeps a property&apos;s
@@ -94,13 +95,14 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-y border-white/8 bg-ink-900 py-20 sm:py-24">
+      <section className="border-y border-ink-100 bg-mist-50 py-20 sm:py-24">
         <Container>
           <Reveal>
             <SectionHeading
               eyebrow="How We Work"
               title="What guides every job we take on"
               align="center"
+              tone="light"
               className="mx-auto"
             />
           </Reveal>
@@ -108,12 +110,12 @@ export default function AboutPage() {
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.06}>
-                <div className="h-full rounded-2xl border border-white/10 bg-ink-950 p-6">
-                  <div className="flex size-12 items-center justify-center rounded-xl border border-white/10 bg-linear-to-br from-blue-500/15 to-lime-300/10 text-lime-300">
+                <div className="h-full rounded-2xl border border-ink-100 bg-white p-6 shadow-[0_1px_2px_rgba(10,24,48,0.04)]">
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                     <value.icon className="size-5" strokeWidth={1.7} />
                   </div>
-                  <h3 className="mt-5 text-base font-semibold text-white">{value.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-300">{value.description}</p>
+                  <h3 className="mt-5 text-base font-semibold text-ink-900">{value.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-500">{value.description}</p>
                 </div>
               </Reveal>
             ))}
@@ -121,17 +123,18 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <SectionHeading
               eyebrow="Where We Work"
               title="Covering London, Surrey, Essex & Kent"
               description="We take on domestic, communal, estate and commercial work throughout these four counties, with the flexibility to travel further for larger estate and commercial contracts."
+              tone="light"
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10">
+            <div className="relative overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.3)]">
               <MediaPanel surface="abstract" tone="brand" icon={Droplets} className="relative aspect-[16/10]" />
             </div>
           </Reveal>

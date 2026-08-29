@@ -39,16 +39,10 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      {/* Backdrop-filter lives on this inner wrapper, not <header> itself —
-          a filter/backdrop-filter on the fixed ancestor would turn it into
-          the containing block for its fixed children (the mobile overlay
-          and drawer below), collapsing them to the header's own height. */}
       <div
         className={cn(
-          "transition-all duration-300",
-          scrolled || open
-            ? "bg-ink-950/85 shadow-[0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-md"
-            : "bg-linear-to-b from-ink-950/70 to-transparent",
+          "border-b border-ink-100 bg-white transition-shadow duration-300",
+          scrolled || open ? "shadow-[0_4px_20px_-8px_rgba(10,24,48,0.18)]" : "shadow-none",
         )}
       >
         <Container className="flex h-18 items-center justify-between py-3.5 sm:py-4">
@@ -65,14 +59,14 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "focus-ring relative text-sm font-medium tracking-wide text-ink-100 transition-colors hover:text-white",
-                    active && "text-white",
+                    "focus-ring relative text-sm font-medium tracking-wide text-ink-600 transition-colors hover:text-ink-900",
+                    active && "text-ink-900",
                   )}
                 >
                   {link.label}
                   <span
                     className={cn(
-                      "absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-lime-300 transition-transform duration-300",
+                      "absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-blue-500 transition-transform duration-300",
                       active && "scale-x-100",
                     )}
                   />
@@ -84,7 +78,7 @@ export function Header() {
           <div className="hidden items-center gap-4 lg:flex">
             <a
               href={siteConfig.phoneHref}
-              className="focus-ring flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-lime-300"
+              className="focus-ring flex items-center gap-2 text-sm font-semibold text-ink-800 transition-colors hover:text-blue-600"
             >
               <Phone className="size-4" />
               {siteConfig.phone}
@@ -97,7 +91,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="focus-ring inline-flex size-11 items-center justify-center rounded-full border border-white/15 text-white lg:hidden"
+            className="focus-ring inline-flex size-11 items-center justify-center rounded-full border border-ink-200 text-ink-800 lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -113,7 +107,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-ink-950/60 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 bg-ink-950/50 backdrop-blur-sm lg:hidden"
             onClick={() => setOpen(false)}
           />
         ) : null}
@@ -126,14 +120,14 @@ export function Header() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-y-0 right-0 z-50 flex w-[86%] max-w-sm flex-col border-l border-white/10 bg-ink-950 px-6 py-6 shadow-2xl lg:hidden"
+            className="fixed inset-y-0 right-0 z-50 flex w-[86%] max-w-sm flex-col border-l border-ink-100 bg-white px-6 py-6 shadow-2xl lg:hidden"
           >
             <div className="flex items-center justify-between">
               <Logo />
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="focus-ring inline-flex size-10 items-center justify-center rounded-full border border-white/15 text-white"
+                className="focus-ring inline-flex size-10 items-center justify-center rounded-full border border-ink-200 text-ink-800"
                 aria-label="Close navigation menu"
               >
                 <X className="size-5" />
@@ -150,7 +144,7 @@ export function Header() {
                 >
                   <Link
                     href={link.href}
-                    className="focus-ring flex items-center justify-between border-b border-white/8 py-4 text-lg font-medium text-white"
+                    className="focus-ring flex items-center justify-between border-b border-ink-100 py-4 text-lg font-medium text-ink-900"
                   >
                     {link.label}
                   </Link>
@@ -161,7 +155,7 @@ export function Header() {
             <div className="mt-auto flex flex-col gap-4 pt-8">
               <a
                 href={siteConfig.phoneHref}
-                className="focus-ring flex items-center justify-center gap-2 rounded-full border border-white/20 py-3.5 text-sm font-semibold text-white"
+                className="focus-ring flex items-center justify-center gap-2 rounded-full border border-ink-200 py-3.5 text-sm font-semibold text-ink-800"
               >
                 <Phone className="size-4" />
                 {siteConfig.phone}

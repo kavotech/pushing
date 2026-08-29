@@ -32,36 +32,36 @@ export default function QuotePage() {
         size="sm"
       />
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container className="grid grid-cols-1 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal>
             <div className="space-y-8">
-              <div className="rounded-2xl border border-white/10 bg-ink-900 p-6">
-                <h2 className="text-lg font-semibold text-white">What happens next</h2>
+              <div className="rounded-2xl border border-ink-100 bg-mist-50 p-6">
+                <h2 className="text-lg font-semibold text-ink-900">What happens next</h2>
                 <ul className="mt-5 space-y-5">
                   {steps.map((step, index) => (
                     <li key={step.text} className="flex items-start gap-3.5">
-                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-blue-500/10 text-sm font-semibold text-blue-300">
+                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-sm font-semibold text-blue-600">
                         {index + 1}
                       </span>
-                      <p className="pt-1.5 text-sm leading-relaxed text-ink-200">{step.text}</p>
+                      <p className="pt-1.5 text-sm leading-relaxed text-ink-600">{step.text}</p>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-lime-300/20 bg-lime-300/5 p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-lime-300">
+              <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-blue-600">
                   Prefer to talk it through?
                 </h3>
                 <a
                   href={siteConfig.phoneHref}
-                  className="focus-ring mt-3 flex items-center gap-2.5 text-xl font-semibold text-white hover:text-lime-300"
+                  className="focus-ring mt-3 flex items-center gap-2.5 text-xl font-semibold text-ink-900 hover:text-blue-600"
                 >
                   <Phone className="size-5" />
                   {siteConfig.phone}
                 </a>
-                <p className="mt-2 text-sm text-ink-300">
+                <p className="mt-2 text-sm text-ink-500">
                   {siteConfig.hours[0].days}, {siteConfig.hours[0].time}
                 </p>
               </div>
@@ -72,8 +72,8 @@ export default function QuotePage() {
                   "Domestic, communal, estate & commercial",
                   "London, Surrey, Essex & Kent",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-sm text-ink-200">
-                    <CheckCircle2 className="size-4 shrink-0 text-lime-300" />
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-ink-700">
+                    <CheckCircle2 className="size-4 shrink-0 text-blue-500" />
                     {item}
                   </li>
                 ))}
@@ -82,9 +82,9 @@ export default function QuotePage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-white/10 bg-ink-900 p-6 sm:p-10">
-              <h2 className="text-2xl font-semibold text-white">Request your free quote</h2>
-              <p className="mt-2 text-sm text-ink-300">
+            <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_1px_2px_rgba(10,24,48,0.04)] sm:p-10">
+              <h2 className="text-2xl font-semibold text-ink-900">Request your free quote</h2>
+              <p className="mt-2 text-sm text-ink-500">
                 The more detail you can give us, the more accurate your quote will be.
               </p>
               <div className="mt-8">

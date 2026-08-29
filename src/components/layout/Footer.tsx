@@ -16,7 +16,7 @@ export function Footer() {
       <Container className="relative py-16 sm:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           <div>
-            <Logo />
+            <Logo variant="dark" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-300">
               {siteConfig.description}
             </p>
@@ -26,7 +26,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Pushing Pressure on Facebook"
-                className="focus-ring inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-colors hover:border-lime-300/50 hover:text-lime-300"
+                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-colors hover:border-lime-300/50 hover:text-lime-300"
               >
                 <FacebookIcon className="size-4" />
               </a>
@@ -35,7 +35,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Pushing Pressure on Instagram"
-                className="focus-ring inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-colors hover:border-lime-300/50 hover:text-lime-300"
+                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-colors hover:border-lime-300/50 hover:text-lime-300"
               >
                 <InstagramIcon className="size-4" />
               </a>
@@ -51,7 +51,7 @@ export function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="focus-ring text-sm text-ink-300 transition-colors hover:text-lime-300"
+                    className="focus-ring-dark text-sm text-ink-300 transition-colors hover:text-lime-300"
                   >
                     {service.shortName}
                   </Link>
@@ -69,7 +69,7 @@ export function Footer() {
                 <li key={area.slug}>
                   <Link
                     href={`/areas-we-cover/${area.slug}`}
-                    className="focus-ring text-sm text-ink-300 transition-colors hover:text-lime-300"
+                    className="focus-ring-dark text-sm text-ink-300 transition-colors hover:text-lime-300"
                   >
                     {area.name}
                   </Link>
@@ -78,7 +78,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/areas-we-cover"
-                  className="focus-ring text-sm text-blue-300 transition-colors hover:text-lime-300"
+                  className="focus-ring-dark text-sm text-blue-300 transition-colors hover:text-lime-300"
                 >
                   View all areas
                 </Link>
@@ -94,7 +94,7 @@ export function Footer() {
               <li>
                 <a
                   href={siteConfig.phoneHref}
-                  className="focus-ring flex items-start gap-3 transition-colors hover:text-lime-300"
+                  className="focus-ring-dark flex items-start gap-3 transition-colors hover:text-lime-300"
                 >
                   <Phone className="mt-0.5 size-4 shrink-0 text-blue-400" />
                   {siteConfig.phone}
@@ -103,7 +103,7 @@ export function Footer() {
               <li>
                 <a
                   href={siteConfig.emailHref}
-                  className="focus-ring flex items-start gap-3 transition-colors hover:text-lime-300"
+                  className="focus-ring-dark flex items-start gap-3 transition-colors hover:text-lime-300"
                 >
                   <Mail className="mt-0.5 size-4 shrink-0 text-blue-400" />
                   {siteConfig.email}
@@ -122,13 +122,16 @@ export function Footer() {
             &copy; {year} {siteConfig.legalName}. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link href="/legal/privacy-policy" className="focus-ring hover:text-ink-200">
+            <Link href="/guides" className="focus-ring-dark hover:text-ink-200">
+              Guides
+            </Link>
+            <Link href="/legal/privacy-policy" className="focus-ring-dark hover:text-ink-200">
               Privacy Policy
             </Link>
-            <Link href="/legal/terms" className="focus-ring hover:text-ink-200">
+            <Link href="/legal/terms" className="focus-ring-dark hover:text-ink-200">
               Terms &amp; Conditions
             </Link>
-            <Link href="/contact" className="focus-ring hover:text-ink-200">
+            <Link href="/contact" className="focus-ring-dark hover:text-ink-200">
               Contact
             </Link>
           </div>

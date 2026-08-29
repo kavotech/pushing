@@ -37,18 +37,19 @@ entry to `services-data.ts` or `areas-data.ts` and a new page is generated autom
 
 ## Before you launch — placeholder content to replace
 
-This was built without access to the client's real business details, logo file or project
-photography. Everything below is a clearly-marked, professional placeholder — replace it
-before going live:
+This was built without access to the client's real business details or project photography.
+Everything below is a clearly-marked, professional placeholder — replace it before going live:
 
 1. **Phone numbers & email** (`src/lib/site-config.ts`) — currently use Ofcom's officially
    reserved fictitious ranges (`020 7946 09xx`, `07700 900xxx`) so they can't collide with a
    real subscriber. Swap in the real office/mobile numbers and inbox.
 2. **Domain** (`siteConfig.url` in `site-config.ts`) — set to the real production domain. It
    feeds canonical URLs, the sitemap, Open Graph tags and JSON-LD.
-3. **Logo** (`src/components/shared/Logo.tsx`) — a code-drawn wordmark + droplet mark in the
-   brand colours, used because no logo file was supplied. Drop in the real logo (SVG
-   preferred) and swap the markup, or keep this as a lightweight fallback.
+3. **Logo** (`public/logo.jpg`, rendered by `src/components/shared/Logo.tsx`) — the real supplied
+   logo, on a flat white background. It's used as-is in the (white) header and mobile drawer;
+   on the navy footer it's wrapped in a small white plate (`variant="dark"`) so it stays
+   legible. Swap in a transparent-background version (PNG/SVG) when one is available and the
+   white-plate wrapper can be dropped.
 4. **Photography** (`src/components/shared/MediaPanel.tsx` and `BeforeAfterSlider.tsx`) — every
    image slot on the site (hero backgrounds, service imagery, the before/after gallery) is a
    generated gradient/texture panel in the brand colours rather than a stock photo pretending
@@ -60,6 +61,9 @@ before going live:
 6. **Company registration details** — no Companies House number, VAT number or registered
    office address is shown anywhere, since none was provided. Add these to the footer if
    required for compliance.
+7. **Reviews/testimonials** — deliberately not included. A fabricated review or star rating
+   attributed to a real platform (Trustpilot, Google, etc.) would be a fake-review claim, not a
+   placeholder — add a real widget once the business has genuine reviews to show.
 
 ## Contact form / email delivery
 
@@ -79,11 +83,16 @@ CONTACT_FROM_EMAIL="Pushing Pressure Website <onboarding@resend.dev>"
 
 ## Design system
 
-- **Colours**: near-black (`ink-*`) base, bright water-blue (`blue-*`) and neon lime
-  (`lime-*`) as strategic accents — defined as Tailwind v4 theme tokens in
-  `src/app/globals.css`.
+- **Colours**: white/light-grey page body, deep navy (`ink-*`) for the header-adjacent hero,
+  the "Fast, Friendly & Reliable Results" banner and the footer, with bright water-blue
+  (`blue-*`) as the primary CTA/accent colour and neon lime (`lime-*`) used sparingly for
+  small highlights — defined as Tailwind v4 theme tokens in `src/app/globals.css`. Two focus
+  ring utilities exist: `.focus-ring` (default, for light sections) and `.focus-ring-dark`
+  (for content sitting on a navy band) — use whichever matches the section's background.
 - **Type**: Space Grotesk for headings, Inter for body text (both via `next/font/google`).
 - **`MediaPanel`**: a reusable, code-generated background system (CSS gradients/patterns, no
   images) used for hero backgrounds, service imagery and the before/after gallery. It ships
   six "surface" textures (paving, brick, render, roof, decking, abstract) and four tone
   presets (before/after/brand/dusk).
+- **`SectionHeading`**: takes a `tone` prop (`"light"` for white sections, `"dark"` for navy
+  bands) that flips its text colours accordingly — always pass the one matching the section.

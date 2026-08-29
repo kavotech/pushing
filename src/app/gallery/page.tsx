@@ -37,10 +37,10 @@ export default function GalleryPage() {
         breadcrumb={[{ label: "Gallery" }]}
       />
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container>
           <Reveal>
-            <p className="max-w-2xl text-sm text-ink-300 sm:text-base">
+            <p className="max-w-2xl text-sm text-ink-500 sm:text-base">
               This gallery is updated as new projects are completed. Every job is different, so
               results vary depending on the surface, staining and property — get in touch for a
               free assessment of your own.
@@ -52,7 +52,7 @@ export default function GalleryPage() {
               <Reveal key={`${project.title}-${index}`} delay={(index % 3) * 0.06}>
                 <div>
                   <BeforeAfterSlider surface={project.surface} title={project.title} />
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-blue-300">
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-blue-600">
                     {project.category}
                   </p>
                 </div>

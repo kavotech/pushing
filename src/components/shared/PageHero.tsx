@@ -33,14 +33,14 @@ export function PageHero({
       <Container className="relative">
         {breadcrumb ? (
           <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-1.5 text-xs text-ink-300">
-            <Link href="/" className="focus-ring transition-colors hover:text-white">
+            <Link href="/" className="focus-ring-dark transition-colors hover:text-white">
               Home
             </Link>
             {breadcrumb.map((crumb) => (
               <span key={crumb.label} className="flex items-center gap-1.5">
                 <ChevronRight className="size-3.5" />
                 {crumb.href ? (
-                  <Link href={crumb.href} className="focus-ring transition-colors hover:text-white">
+                  <Link href={crumb.href} className="focus-ring-dark transition-colors hover:text-white">
                     {crumb.label}
                   </Link>
                 ) : (

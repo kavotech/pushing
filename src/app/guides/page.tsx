@@ -1,0 +1,67 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Clock } from "lucide-react";
+import { PageHero } from "@/components/shared/PageHero";
+import { Container } from "@/components/shared/Container";
+import { Reveal } from "@/components/shared/Reveal";
+import { MediaPanel } from "@/components/shared/MediaPanel";
+import { CTASection } from "@/components/shared/CTASection";
+import { guides } from "@/lib/guides-data";
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Guides & Insights",
+  description:
+    "Practical, no-nonsense guides on pressure washing, softwashing and keeping your property's exterior in good condition.",
+  path: "/guides",
+});
+
+export default function GuidesPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Guides & Insights"
+        title="Exterior cleaning guides & insights"
+        description="Practical advice on pressure washing, softwashing and keeping your property looking its best."
+        surface="abstract"
+        breadcrumb={[{ label: "Guides" }]}
+        size="sm"
+      />
+
+      <section className="bg-white py-20 sm:py-24">
+        <Container>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {guides.map((guide, index) => (
+              <Reveal key={guide.slug} delay={index * 0.06}>
+                <Link
+                  href={`/guides/${guide.slug}`}
+                  className="focus-ring group flex h-full flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_1px_2px_rgba(10,24,48,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_16px_40px_-16px_rgba(10,24,48,0.18)]"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <MediaPanel surface={guide.surface} tone="brand" className="absolute inset-0" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-600">
+                      <Clock className="size-3.5" />
+                      {guide.readTime}
+                    </span>
+                    <h2 className="mt-3 text-lg font-semibold text-ink-900">{guide.title}</h2>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">
+                      {guide.excerpt}
+                    </p>
+                    <span className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-blue-600">
+                      Read guide
+                      <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <CTASection />
+    </>
+  );
+}

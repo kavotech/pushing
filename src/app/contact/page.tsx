@@ -26,21 +26,21 @@ export default function ContactPage() {
         size="sm"
       />
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container className="grid grid-cols-1 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal>
             <div className="space-y-6">
               <ContactCard icon={Phone} title="Call us">
-                <a href={siteConfig.phoneHref} className="focus-ring block hover:text-lime-300">
+                <a href={siteConfig.phoneHref} className="focus-ring block hover:text-blue-600">
                   {siteConfig.phone}
                 </a>
-                <a href={siteConfig.mobileHref} className="focus-ring block hover:text-lime-300">
+                <a href={siteConfig.mobileHref} className="focus-ring block hover:text-blue-600">
                   {siteConfig.mobile}
                 </a>
               </ContactCard>
 
               <ContactCard icon={Mail} title="Email us">
-                <a href={siteConfig.emailHref} className="focus-ring block hover:text-lime-300">
+                <a href={siteConfig.emailHref} className="focus-ring block hover:text-blue-600">
                   {siteConfig.email}
                 </a>
               </ContactCard>
@@ -48,14 +48,14 @@ export default function ContactPage() {
               <ContactCard icon={Clock} title="Opening hours">
                 {siteConfig.hours.map((entry) => (
                   <div key={entry.days} className="flex justify-between gap-4 text-sm">
-                    <span className="text-ink-300">{entry.days}</span>
-                    <span className="text-ink-100">{entry.time}</span>
+                    <span className="text-ink-500">{entry.days}</span>
+                    <span className="text-ink-800">{entry.time}</span>
                   </div>
                 ))}
               </ContactCard>
 
               <ContactCard icon={MapPin} title="Where we work">
-                <p className="text-sm text-ink-300">
+                <p className="text-sm text-ink-500">
                   Covering London, Surrey, Essex and Kent for domestic, communal, estate and
                   commercial exterior cleaning.
                 </p>
@@ -64,9 +64,9 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-white/10 bg-ink-900 p-6 sm:p-10">
-              <h2 className="text-2xl font-semibold text-white">Send us a message</h2>
-              <p className="mt-2 text-sm text-ink-300">
+            <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_1px_2px_rgba(10,24,48,0.04)] sm:p-10">
+              <h2 className="text-2xl font-semibold text-ink-900">Send us a message</h2>
+              <p className="mt-2 text-sm text-ink-500">
                 Fill in the form and we&apos;ll get back to you, usually within one working day.
               </p>
               <div className="mt-8">
@@ -90,14 +90,14 @@ function ContactCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-ink-900 p-6">
+    <div className="rounded-2xl border border-ink-100 bg-mist-50 p-6">
       <div className="flex items-center gap-3">
-        <span className="flex size-10 items-center justify-center rounded-full border border-white/10 bg-blue-500/10 text-blue-300">
+        <span className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
           <Icon className="size-4" />
         </span>
-        <h3 className="text-base font-semibold text-white">{title}</h3>
+        <h3 className="text-base font-semibold text-ink-900">{title}</h3>
       </div>
-      <div className="mt-4 space-y-1.5 text-sm font-medium text-ink-100">{children}</div>
+      <div className="mt-4 space-y-1.5 text-sm font-medium text-ink-700">{children}</div>
     </div>
   );
 }

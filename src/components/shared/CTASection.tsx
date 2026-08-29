@@ -13,10 +13,10 @@ export function CTASection({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink-950 py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-28">
       <Container>
         <Reveal>
-          <div className="relative isolate overflow-hidden rounded-3xl border border-white/10 p-10 sm:p-14 lg:p-16">
+          <div className="relative isolate overflow-hidden rounded-3xl border border-white/10 p-10 shadow-[0_30px_70px_-30px_rgba(10,24,48,0.45)] sm:p-14 lg:p-16">
             <MediaPanel surface="abstract" tone="brand" className="absolute inset-0" />
             <div className="relative mx-auto max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -31,7 +31,7 @@ export function CTASection({
                 </Button>
                 <a
                   href={siteConfig.phoneHref}
-                  className="focus-ring inline-flex items-center gap-2 text-base font-semibold text-white hover:text-lime-300"
+                  className="focus-ring-dark inline-flex items-center gap-2 text-base font-semibold text-white hover:text-lime-300"
                 >
                   <Phone className="size-4" />
                   {siteConfig.phone}

@@ -48,23 +48,23 @@ export default async function AreaDetailPage({ params }: { params: Promise<Param
         breadcrumb={[{ label: "Areas We Cover", href: "/areas-we-cover" }, { label: area.name }]}
       />
 
-      <section className="bg-ink-950 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container className="grid grid-cols-1 gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <Reveal>
-            <div className="space-y-4 text-base leading-relaxed text-ink-200 sm:text-lg">
+            <div className="space-y-4 text-base leading-relaxed text-ink-600 sm:text-lg">
               {area.description.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
 
             <div className="mt-10">
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-lime-300">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-blue-600">
                 Services available in {area.name}
               </h2>
               <ul className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {services.map((service) => (
-                  <li key={service.slug} className="flex items-start gap-2.5 text-sm text-ink-200">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-blue-400" />
+                  <li key={service.slug} className="flex items-start gap-2.5 text-sm text-ink-700">
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-blue-500" />
                     {service.name}
                   </li>
                 ))}
@@ -73,8 +73,8 @@ export default async function AreaDetailPage({ params }: { params: Promise<Param
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-white/10 bg-ink-900 p-7">
-              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-lime-300">
+            <div className="rounded-2xl border border-ink-100 bg-mist-50 p-7">
+              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-blue-600">
                 <MapPin className="size-4" />
                 Towns &amp; areas we serve in {area.name}
               </h3>
@@ -82,13 +82,13 @@ export default async function AreaDetailPage({ params }: { params: Promise<Param
                 {area.towns.map((town) => (
                   <span
                     key={town}
-                    className="rounded-full border border-white/10 bg-ink-950 px-3.5 py-1.5 text-sm text-ink-200"
+                    className="rounded-full border border-ink-100 bg-white px-3.5 py-1.5 text-sm text-ink-600"
                   >
                     {town}
                   </span>
                 ))}
               </div>
-              <p className="mt-6 text-sm leading-relaxed text-ink-300">
+              <p className="mt-6 text-sm leading-relaxed text-ink-500">
                 Based outside these areas? We may still be able to help — get in touch with your
                 postcode and we&apos;ll confirm coverage.
               </p>
@@ -97,10 +97,14 @@ export default async function AreaDetailPage({ params }: { params: Promise<Param
         </Container>
       </section>
 
-      <section className="border-t border-white/8 bg-ink-900 py-20 sm:py-24">
+      <section className="border-t border-ink-100 bg-mist-50 py-20 sm:py-24">
         <Container>
           <Reveal>
-            <SectionHeading eyebrow="Popular Services" title={`Exterior cleaning services in ${area.name}`} />
+            <SectionHeading
+              eyebrow="Popular Services"
+              title={`Exterior cleaning services in ${area.name}`}
+              tone="light"
+            />
           </Reveal>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.slice(0, 3).map((service, index) => (

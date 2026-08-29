@@ -10,12 +10,12 @@ const baseStyles =
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-lime-300 text-ink-950 hover:bg-lime-200 shadow-[0_0_0_1px_rgba(183,234,40,0.15)] hover:shadow-glow-lime hover:-translate-y-0.5",
+    "bg-blue-500 text-white hover:bg-blue-600 shadow-[0_0_0_1px_rgba(20,135,223,0.15)] hover:shadow-glow-blue hover:-translate-y-0.5",
   secondary:
-    "bg-white text-ink-950 hover:bg-mist-100 hover:-translate-y-0.5",
+    "border border-ink-200 bg-white text-ink-800 hover:border-blue-400 hover:text-blue-600 hover:-translate-y-0.5",
   "outline-light":
-    "border border-white/25 text-white hover:border-white/60 hover:bg-white/5",
-  ghost: "text-white hover:text-lime-300",
+    "border border-white/30 text-white hover:border-white/60 hover:bg-white/10",
+  ghost: "text-ink-800 hover:text-blue-600",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
