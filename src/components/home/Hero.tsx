@@ -28,11 +28,6 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
-            London · Surrey · Essex · Kent
-          </span>
-
           <h1 className="text-balance text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-[3.25rem]">
             Need Your Property{" "}
             <span className="text-gradient">Professionally Cleaned?</span> We Can Help!

@@ -68,9 +68,11 @@ export default function PrivacyPolicyPage() {
 
             <h2>Cookies</h2>
             <p>
-              This website does not use tracking or advertising cookies. Where any strictly
-              necessary technical storage is used to make the site function correctly, it does
-              not identify you personally.
+              This website does not use tracking or advertising cookies. When you respond to the
+              cookie notice, your choice is stored in your browser&apos;s local storage so we can
+              remember it on your next visit — this stays on your device and isn&apos;t used to
+              identify or track you. Where any other strictly necessary technical storage is used
+              to make the site function correctly, it does not identify you personally either.
             </p>
 
             <h2>Contact us</h2>
