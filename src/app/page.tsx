@@ -7,6 +7,7 @@ import { ProcessSection } from "@/components/home/ProcessSection";
 import { BeforeAfterSection } from "@/components/home/BeforeAfterSection";
 import { AreasSection } from "@/components/home/AreasSection";
 import { GuidesSection } from "@/components/home/GuidesSection";
+import { OwnerPreviewSection } from "@/components/home/OwnerPreviewSection";
 import { CTASection } from "@/components/shared/CTASection";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -28,6 +29,7 @@ export default function Home() {
       <BeforeAfterSection />
       <AreasSection />
       <GuidesSection />
+      <OwnerPreviewSection />
       <CTASection />
     </>
   );

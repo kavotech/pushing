@@ -133,6 +133,57 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section id="about-me" className="relative overflow-hidden bg-ink-950 py-24 sm:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(20,135,223,0.16),transparent_60%)]" />
+        <Container className="relative grid grid-cols-1 items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <Reveal>
+            <SectionHeading eyebrow="From The Founder" title="A Little About Me" tone="dark" />
+            <div className="relative mt-8 aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)]">
+              <Photo photo={photos.heroDrivewaySupercar} className="absolute inset-0" />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="space-y-5 text-base leading-relaxed text-ink-200 sm:text-lg">
+            <p>
+              Pushing Pressure started with just a boy from South London with a dream, a pressure
+              washer, and a determination to build something of his own.
+            </p>
+            <p>
+              What began as a small idea has grown into a business I&apos;m genuinely proud of.
+              There were no shortcuts — just hard work, long days, learning from every job and
+              constantly investing back into better equipment and a better service.
+            </p>
+            <p>
+              Since starting, I&apos;ve had the privilege of cleaning over 100 driveways, patios
+              and outdoor spaces across London and surrounding areas, helping homeowners and
+              businesses bring their properties back to life.
+            </p>
+            <p>
+              Today, Pushing Pressure Ltd is a fully insured professional exterior cleaning
+              company, covered by £1 million Public Liability Insurance, using professional-grade
+              equipment and taking pride in every single job — whether it&apos;s a small family
+              driveway or a large commercial property.
+            </p>
+            <p className="font-display text-lg font-semibold text-white sm:text-xl">
+              But for me, it&apos;s about more than pressure washing.
+            </p>
+            <p>
+              It&apos;s about building something my family can be proud of, creating a name that
+              people can trust, and showing that with consistency, faith and hard work, a simple
+              idea can become something special.
+            </p>
+            <p>
+              Every customer who books, recommends us, leaves a review or follows the journey is
+              helping that original South London dream continue to grow.
+            </p>
+            <p>Thank you for trusting Pushing Pressure Ltd with your property.</p>
+            <p className="font-display text-lg font-semibold text-white">
+              This is only the beginning. 💙
+            </p>
+          </Reveal>
+        </Container>
+      </section>
+
       <CTASection />
     </>
   );
