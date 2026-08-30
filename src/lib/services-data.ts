@@ -113,6 +113,7 @@ export const services: Service[] = [
     name: "Softwashing",
     shortName: "Softwashing",
     icon: SprayCan,
+    photo: photos.gardenPatioHose,
     tagline: "Low-pressure cleaning for delicate exterior surfaces",
     summary:
       "Gentle, low-pressure treatment that safely removes algae, moss and black staining from render, cladding and roofs.",
@@ -182,6 +183,7 @@ export const services: Service[] = [
     name: "Gutter Cleaning",
     shortName: "Gutter Cleaning",
     icon: CloudRain,
+    photo: photos.porchDrivewayAfter,
     tagline: "Ground-based gutter clearing and inspection",
     summary:
       "Professional gutter clearing using high-reach vacuum equipment, removing moss, leaves and debris that cause blockages.",
@@ -321,6 +323,7 @@ export const services: Service[] = [
     name: "Communal Area Cleaning",
     shortName: "Communal Areas",
     icon: Users,
+    photo: photos.flagstonePatioHoseReel,
     tagline: "Exterior cleaning for shared residential areas",
     summary:
       "Reliable exterior cleaning for the shared spaces of apartment blocks and residential developments — entrances, walkways and bin stores.",
@@ -390,6 +393,7 @@ export const services: Service[] = [
     name: "Commercial Exterior Cleaning",
     shortName: "Commercial",
     icon: Building,
+    photo: photos.heroDrivewaySupercar,
     tagline: "Exterior cleaning for business premises",
     summary:
       "Professional exterior cleaning for shopfronts, offices and commercial premises, scheduled to fit around your business.",

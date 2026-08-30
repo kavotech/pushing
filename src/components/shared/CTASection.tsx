@@ -2,8 +2,9 @@ import { Phone } from "lucide-react";
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { Button } from "@/components/shared/Button";
-import { MediaPanel } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
 import { siteConfig } from "@/lib/site-config";
+import { photos } from "@/lib/photos-data";
 
 export function CTASection({
   title = "Ready to bring your property back to its best?",
@@ -17,7 +18,8 @@ export function CTASection({
       <Container>
         <Reveal>
           <div className="relative isolate overflow-hidden rounded-3xl border border-white/10 p-10 shadow-[0_30px_70px_-30px_rgba(10,24,48,0.45)] sm:p-14 lg:p-16">
-            <MediaPanel surface="abstract" tone="brand" className="absolute inset-0" />
+            <Photo photo={photos.frontGardenDrivewayAfter} className="absolute inset-0" />
+            <div className="absolute inset-0 bg-[radial-gradient(90%_80%_at_50%_20%,rgba(6,20,33,0.55),rgba(5,7,8,0.85))]" />
             <div className="relative mx-auto max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
                 {title}

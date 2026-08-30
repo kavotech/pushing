@@ -1,12 +1,13 @@
 import { Container } from "@/components/shared/Container";
 import { Button } from "@/components/shared/Button";
-import { MediaPanel } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
+import { photos } from "@/lib/photos-data";
 
 export default function NotFound() {
   return (
     <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-ink-950 pt-24">
-      <MediaPanel surface="abstract" tone="dusk" className="absolute inset-0" />
-      <div className="absolute inset-0 bg-linear-to-t from-ink-950 via-ink-950/85 to-ink-950/60" />
+      <Photo photo={photos.gardenPatioHose} className="absolute inset-0" />
+      <div className="absolute inset-0 bg-linear-to-t from-ink-950 via-ink-950/85 to-ink-950/70" />
       <Container className="relative text-center">
         <span className="font-display text-7xl font-bold text-gradient sm:text-8xl">404</span>
         <h1 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">Page not found</h1>

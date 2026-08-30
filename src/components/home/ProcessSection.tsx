@@ -2,7 +2,8 @@ import { CalendarCheck, CircleCheckBig, ClipboardCheck, MessageSquare, SprayCan 
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { MediaPanel } from "@/components/shared/MediaPanel";
+import { Photo } from "@/components/shared/Photo";
+import { photos } from "@/lib/photos-data";
 
 const steps = [
   {
@@ -66,7 +67,7 @@ export function ProcessSection() {
 
         <Reveal delay={0.2} className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.35)]">
-            <MediaPanel surface="roof" tone="after" className="absolute inset-0" />
+            <Photo photo={photos.flagstonePatioRotaryCleaner} className="absolute inset-0" />
           </div>
           <div className="absolute -bottom-6 -left-6 flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-4 shadow-[0_16px_40px_-16px_rgba(10,24,48,0.25)]">
             <span className="flex size-10 items-center justify-center rounded-full border border-lime-300 text-lime-600">
