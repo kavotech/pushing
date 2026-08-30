@@ -6,14 +6,10 @@ export const siteConfig = {
   description:
     "Pushing Pressure LTD provides professional exterior cleaning for homes, estates, communal areas and commercial properties across London, Surrey, Essex and Kent.",
   url: "https://www.pushingpressure.co.uk",
-  // Placeholder contact details using Ofcom-reserved fictitious ranges.
-  // Replace with the client's real business phone, mobile and inbox before launch.
-  phone: "020 7946 0958",
-  phoneHref: "tel:+442079460958",
-  mobile: "07700 900482",
-  mobileHref: "tel:+447700900482",
-  email: "info@pushingpressure.co.uk",
-  emailHref: "mailto:info@pushingpressure.co.uk",
+  phone: "+44 7376 747629",
+  phoneHref: "tel:+447376747629",
+  email: "info@pushingpressureltd.com",
+  emailHref: "mailto:info@pushingpressureltd.com",
   hours: [
     { days: "Monday – Saturday", time: "7:00am – 6:00pm" },
     { days: "Sunday", time: "Closed" },

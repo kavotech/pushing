@@ -35,9 +35,6 @@ export default function ContactPage() {
                 <a href={siteConfig.phoneHref} className="focus-ring block hover:text-blue-600">
                   {siteConfig.phone}
                 </a>
-                <a href={siteConfig.mobileHref} className="focus-ring block hover:text-blue-600">
-                  {siteConfig.mobile}
-                </a>
               </ContactCard>
 
               <ContactCard icon={Mail} title="Email us">
