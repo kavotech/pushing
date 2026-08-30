@@ -183,7 +183,7 @@ export const services: Service[] = [
     name: "Gutter Cleaning",
     shortName: "Gutter Cleaning",
     icon: CloudRain,
-    photo: photos.porchDrivewayAfter,
+    photo: photos.guideGuttersSigns,
     tagline: "Ground-based gutter clearing and inspection",
     summary:
       "Professional gutter clearing using high-reach vacuum equipment, removing moss, leaves and debris that cause blockages.",
@@ -253,7 +253,7 @@ export const services: Service[] = [
     name: "Estate Cleaning",
     shortName: "Estate Cleaning",
     icon: Building2,
-    photo: photos.detachedDrivewayAfter,
+    photo: photos.estateHouseGarden,
     tagline: "Grounds and exterior cleaning for estates",
     summary:
       "Coordinated exterior cleaning across driveways, boundary walls, pathways and shared grounds for larger estate properties.",
@@ -393,7 +393,7 @@ export const services: Service[] = [
     name: "Commercial Exterior Cleaning",
     shortName: "Commercial",
     icon: Building,
-    photo: photos.heroDrivewaySupercar,
+    photo: photos.commercialBuildingWall,
     tagline: "Exterior cleaning for business premises",
     summary:
       "Professional exterior cleaning for shopfronts, offices and commercial premises, scheduled to fit around your business.",

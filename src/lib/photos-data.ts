@@ -108,6 +108,102 @@ export const photos: Record<string, Photo> = {
     alt: "Pushing Pressure team member pressure washing a resin driveway outside a large modern home",
     focus: "center 55%",
   },
+  guideDrivewayFrequency: {
+    id: "guide-driveway-frequency",
+    src: "/photos/guide-driveway-frequency.jpg",
+    alt: "Pushing Pressure team member pressure washing a block paved driveway",
+    focus: "center 45%",
+  },
+  guideGuttersSigns: {
+    id: "guide-gutters-signs",
+    src: "/photos/guide-gutters-signs.jpg",
+    alt: "Close-up of a roof gutter blocked with leaves, moss and debris",
+    focus: "center 50%",
+  },
+  commercialBuildingWall: {
+    id: "commercial-building-wall",
+    src: "/photos/commercial-building-wall.jpg",
+    alt: "Rendered exterior wall of a commercial premises with algae staining, ready for cleaning",
+    focus: "center 40%",
+  },
+  estateHouseGarden: {
+    id: "estate-house-garden",
+    src: "/photos/estate-house-garden.jpg",
+    alt: "Large detached house with a modern glass extension and landscaped rear garden",
+    focus: "center 35%",
+  },
+  estateHousePatio1: {
+    id: "estate-house-patio-1",
+    src: "/photos/estate-house-patio-1.jpg",
+    alt: "Modern glass extension and stone patio of a large estate property, mid-clean with equipment out",
+    focus: "center 55%",
+  },
+  estateHousePatio2: {
+    id: "estate-house-patio-2",
+    src: "/photos/estate-house-patio-2.jpg",
+    alt: "Large red brick estate house with stone patio, pressure washer hose laid out",
+    focus: "center 40%",
+  },
+  renderWallBefore: {
+    id: "render-wall-before",
+    src: "/photos/render-wall-before.jpg",
+    alt: "Rendered wall with green algae staining before softwashing",
+    focus: "center 45%",
+  },
+  renderWallAfter: {
+    id: "render-wall-after",
+    src: "/photos/render-wall-after.jpg",
+    alt: "Rendered wall after softwashing, with algae staining removed",
+    focus: "center 45%",
+  },
+  commercialWallBefore: {
+    id: "commercial-wall-before",
+    src: "/photos/commercial-wall-before.jpg",
+    alt: "Commercial premises rendered wall with algae staining before cleaning",
+    focus: "center 40%",
+  },
+  commercialWallAfter: {
+    id: "commercial-wall-after",
+    src: "/photos/commercial-wall-after.jpg",
+    alt: "Commercial premises rendered wall after cleaning, algae staining removed",
+    focus: "center 40%",
+  },
+  roofSoftwashBefore: {
+    id: "roof-softwash-before",
+    src: "/photos/roof-softwash-before.jpg",
+    alt: "Roof tiles and gutter covered in moss and leaf debris before softwashing",
+    focus: "center 55%",
+  },
+  roofSoftwashAfter: {
+    id: "roof-softwash-after",
+    src: "/photos/roof-softwash-after.jpg",
+    alt: "Roof tiles and gutter after softwashing, moss and debris removed",
+    focus: "center 55%",
+  },
+  gardenStepsBefore: {
+    id: "garden-steps-before",
+    src: "/photos/garden-steps-before.jpg",
+    alt: "Patio and rounded brick steps with moss and staining before cleaning",
+    focus: "center 55%",
+  },
+  gardenStepsAfter: {
+    id: "garden-steps-after",
+    src: "/photos/garden-steps-after.jpg",
+    alt: "Patio and rounded brick steps after a professional clean",
+    focus: "center 55%",
+  },
+  flagstoneSummerhouseBefore: {
+    id: "flagstone-summerhouse-before",
+    src: "/photos/flagstone-summerhouse-before.jpg",
+    alt: "Flagstone patio by a garden summer house before cleaning, with moss and weeds",
+    focus: "center 45%",
+  },
+  flagstoneSummerhouseAfter: {
+    id: "flagstone-summerhouse-after",
+    src: "/photos/flagstone-summerhouse-after.jpg",
+    alt: "Flagstone patio by a garden summer house, cleaned with a surface cleaner",
+    focus: "center 45%",
+  },
 };
 
 export const photoList = Object.values(photos);
@@ -134,5 +230,30 @@ export const photoPairs: { title: string; before: Photo; after: Photo }[] = [
     title: "Front Garden Driveway",
     before: photos.frontGardenDrivewayBefore,
     after: photos.frontGardenDrivewayAfter,
+  },
+  {
+    title: "Render Wall Softwash",
+    before: photos.renderWallBefore,
+    after: photos.renderWallAfter,
+  },
+  {
+    title: "Commercial Wall Clean",
+    before: photos.commercialWallBefore,
+    after: photos.commercialWallAfter,
+  },
+  {
+    title: "Roof Tile Softwash",
+    before: photos.roofSoftwashBefore,
+    after: photos.roofSoftwashAfter,
+  },
+  {
+    title: "Garden Steps & Patio",
+    before: photos.gardenStepsBefore,
+    after: photos.gardenStepsAfter,
+  },
+  {
+    title: "Summer House Patio",
+    before: photos.flagstoneSummerhouseBefore,
+    after: photos.flagstoneSummerhouseAfter,
   },
 ];

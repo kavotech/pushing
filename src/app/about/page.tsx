@@ -127,7 +127,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.3)]">
-              <Photo photo={photos.drivewayAfter} className="absolute inset-0" />
+              <Photo photo={photos.estateHousePatio2} className="absolute inset-0" />
             </div>
           </Reveal>
         </Container>

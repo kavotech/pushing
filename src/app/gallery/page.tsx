@@ -21,14 +21,12 @@ const recentWork = [
   { photo: photos.patioPressureWashAction, caption: "Pressure washing a garden patio" },
   { photo: photos.gardenPatioHose, caption: "Garden patio and path, cleaned" },
   { photo: photos.detachedDrivewayAfter, caption: "Driveway and courtyard, after cleaning" },
-  { photo: photos.flagstonePatioRotaryCleaner, caption: "Flagstone patio, cleaned with a surface cleaner" },
+  { photo: photos.flagstoneSummerhouseAfter, caption: "Flagstone patio, cleaned with a surface cleaner" },
   { photo: photos.patioDuringClean, caption: "Rear garden patio, mid-clean" },
   { photo: photos.patioBefore, caption: "Rear garden patio, before cleaning" },
 ];
 
 const projects: { surface: Surface; title: string; category: string }[] = [
-  { surface: "render", title: "Render Softwash", category: "Softwashing" },
-  { surface: "roof", title: "Roof Tile Softwash", category: "Softwashing" },
   { surface: "brick", title: "Boundary Wall Clean", category: "Estate Cleaning" },
   { surface: "decking", title: "Garden Decking", category: "Domestic Cleaning" },
   { surface: "paving", title: "Communal Walkway", category: "Communal Area Cleaning" },

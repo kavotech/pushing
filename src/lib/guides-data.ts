@@ -19,7 +19,7 @@ export const guides: Guide[] = [
       "Moss, algae and general grime build up faster than most homeowners expect. Here's a sensible guide to timing your next clean.",
     readTime: "4 min read",
     surface: "paving",
-    photo: photos.drivewayBefore,
+    photo: photos.guideDrivewayFrequency,
     content: [
       "There's no single answer that fits every driveway — how quickly dirt, moss and algae build up depends on the material, how shaded the area is, and what's growing nearby. That said, most homeowners find an annual clean keeps a driveway looking its best without letting grime become deeply ingrained.",
       "Shaded, north-facing or tree-lined driveways tend to hold moisture longer, which speeds up algae and moss growth. If your driveway rarely sees direct sun, it may be worth cleaning it every six to nine months rather than waiting a full year.",
@@ -51,7 +51,7 @@ export const guides: Guide[] = [
       "Blocked gutters are one of the most common causes of water damage to a property. Here's what to look out for.",
     readTime: "3 min read",
     surface: "roof",
-    photo: photos.porchDrivewayAfter,
+    photo: photos.guideGuttersSigns,
     content: [
       "Gutters do a quiet but important job — keeping rainwater away from your walls, windows and foundations. When they're blocked, that water has to go somewhere else, and it's rarely somewhere convenient.",
       "1. Water overflowing during rain. If you notice water spilling over the edge of a gutter rather than draining through the downpipe, that's usually the clearest sign of a blockage.",

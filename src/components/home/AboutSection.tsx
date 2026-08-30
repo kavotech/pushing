@@ -59,7 +59,7 @@ export function AboutSection() {
             className="absolute -inset-4 hidden -rotate-2 rounded-[2.5rem] bg-linear-to-br from-blue-100 to-lime-100 sm:block"
           />
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-[0_24px_60px_-24px_rgba(10,24,48,0.35)] sm:aspect-[5/4] lg:aspect-[4/5]">
-            <Photo photo={photos.detachedDrivewayAfter} className="absolute inset-0" />
+            <Photo photo={photos.estateHousePatio1} className="absolute inset-0" />
             <div className="absolute inset-0 bg-linear-to-t from-ink-950/70 via-transparent to-transparent" />
             <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/10 bg-ink-950/70 p-5 backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-wider text-lime-300">
