@@ -25,7 +25,7 @@ export function GuidesSection() {
             <Reveal key={guide.slug} delay={index * 0.06}>
               <Link
                 href={`/guides/${guide.slug}`}
-                className="focus-ring group flex h-full flex-col overflow-hidden rounded-xl border border-ink-100 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)]"
+                className="focus-ring group flex h-full flex-col overflow-hidden rounded-xl border border-ink-100 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)] active:scale-[0.98] active:border-blue-200 active:shadow-[0_12px_28px_-16px_rgba(10,24,48,0.2)] active:duration-150"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   {guide.photo ? (
@@ -45,7 +45,7 @@ export function GuidesSection() {
                   </p>
                   <span className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-blue-600">
                     Read guide
-                    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1" />
                   </span>
                 </div>
               </Link>

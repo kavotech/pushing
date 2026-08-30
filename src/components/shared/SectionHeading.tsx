@@ -26,17 +26,14 @@ export function SectionHeading({
       {eyebrow ? (
         <span
           className={cn(
-            "mb-4 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em]",
-            tone === "dark"
-              ? "border-lime-300/30 bg-lime-300/10 text-lime-300"
-              : "border-blue-600/20 bg-blue-500/5 text-blue-700",
+            "mb-3 inline-flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.2em]",
+            align === "center" && "justify-center",
+            tone === "dark" ? "text-lime-300" : "text-blue-600",
           )}
         >
           <span
-            className={cn(
-              "h-1.5 w-1.5 rounded-full",
-              tone === "dark" ? "bg-lime-300" : "bg-blue-500",
-            )}
+            aria-hidden
+            className={cn("h-[3px] w-7 rounded-full", tone === "dark" ? "bg-lime-300" : "bg-blue-500")}
           />
           {eyebrow}
         </span>

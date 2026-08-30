@@ -5,6 +5,7 @@ import { Building2, ShieldCheck, Sparkles, Clock } from "lucide-react";
 import { Button } from "@/components/shared/Button";
 import { Container } from "@/components/shared/Container";
 import { Photo } from "@/components/shared/Photo";
+import { TypewriterHeadline } from "@/components/home/TypewriterHeadline";
 import { photos } from "@/lib/photos-data";
 
 const heroPoints = [
@@ -28,31 +29,44 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <h1 className="text-balance text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-[3.25rem]">
-            Need Your Property{" "}
-            <span className="text-gradient">Professionally Cleaned?</span> We Can Help!
-          </h1>
+          <TypewriterHeadline />
 
-          <p className="mt-6 max-w-xl text-balance text-base leading-relaxed text-ink-100 sm:text-lg">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 max-w-xl text-balance text-base leading-relaxed text-ink-100 sm:text-lg"
+          >
             Powerful, professional exterior cleaning for homes, estates, communal areas and
             commercial properties across London, Surrey, Essex and Kent.
-          </p>
+          </motion.p>
 
-          <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
+          >
             <Button href="/quote" size="lg">
               Get A Free Quote
             </Button>
             <Button href="/services" size="lg" variant="outline-light">
               View Our Services
             </Button>
-          </div>
+          </motion.div>
 
           <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-8 sm:grid-cols-4">
-            {heroPoints.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-xs font-medium text-ink-100 sm:text-sm">
+            {heroPoints.map(({ icon: Icon, label }, index) => (
+              <motion.div
+                key={label}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="flex items-center gap-2 text-xs font-medium text-ink-100 sm:text-sm"
+              >
                 <Icon className="size-5 shrink-0 text-lime-300" strokeWidth={1.75} />
                 {label}
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

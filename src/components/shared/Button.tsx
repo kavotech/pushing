@@ -6,16 +6,16 @@ type ButtonVariant = "primary" | "secondary" | "outline-light" | "ghost";
 type ButtonSize = "md" | "lg";
 
 const baseStyles =
-  "focus-ring group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all duration-300 ease-out";
+  "focus-ring group relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all duration-300 ease-out active:scale-[0.96] active:duration-150";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-blue-500 text-white hover:bg-blue-600 shadow-[0_0_0_1px_rgba(20,135,223,0.15)] hover:shadow-glow-blue hover:-translate-y-0.5",
+    "bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-600 shadow-[0_0_0_1px_rgba(20,135,223,0.15)] hover:shadow-glow-blue hover:-translate-y-0.5",
   secondary:
-    "border border-ink-200 bg-white text-ink-800 hover:border-blue-400 hover:text-blue-600 hover:-translate-y-0.5",
+    "border border-ink-200 bg-white text-ink-800 hover:border-blue-400 hover:text-blue-600 active:border-blue-400 active:text-blue-600 hover:-translate-y-0.5",
   "outline-light":
-    "border border-white/30 text-white hover:border-white/60 hover:bg-white/10",
-  ghost: "text-ink-800 hover:text-blue-600",
+    "border border-white/30 text-white hover:border-white/60 hover:bg-white/10 active:border-white/60 active:bg-white/10",
+  ghost: "text-ink-800 hover:text-blue-600 active:text-blue-600",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

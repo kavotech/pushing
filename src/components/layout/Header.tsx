@@ -91,11 +91,35 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="focus-ring inline-flex size-11 items-center justify-center rounded-full border border-ink-200 text-ink-800 lg:hidden"
+            className="focus-ring active:scale-90 relative inline-flex size-11 items-center justify-center overflow-hidden rounded-full border border-ink-200 text-ink-800 transition-transform duration-150 lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            <AnimatePresence mode="wait" initial={false}>
+              {open ? (
+                <motion.span
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex"
+                >
+                  <X className="size-5" />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex"
+                >
+                  <Menu className="size-5" />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
         </Container>
       </div>

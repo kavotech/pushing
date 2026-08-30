@@ -176,7 +176,7 @@ export function EnquiryForm({ variant = "quote" }: { variant?: Variant }) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="focus-ring inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-500 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-600 hover:shadow-glow-blue disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="focus-ring inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-500 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-600 hover:shadow-glow-blue active:scale-[0.97] active:bg-blue-600 active:duration-150 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         {status === "loading" ? <Loader2 className="size-4 animate-spin" /> : null}
         {status === "loading"

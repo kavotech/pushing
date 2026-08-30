@@ -66,8 +66,8 @@ export function PageHero({
         ) : null}
 
         {eyebrow ? (
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
+          <span className="mb-5 inline-flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.2em] text-lime-300">
+            <span aria-hidden className="h-[3px] w-7 rounded-full bg-lime-300" />
             {eyebrow}
           </span>
         ) : null}
