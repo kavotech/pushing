@@ -15,7 +15,7 @@ export function ServiceCTACard() {
 
       <a
         href={siteConfig.phoneHref}
-        className="focus-ring-dark mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700"
+        className="focus-ring-dark mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-blue-600 transition-all duration-200 hover:-translate-y-0.5 hover:text-blue-700 active:scale-95 active:duration-150"
       >
         <Phone className="size-4" />
         Call Us Now

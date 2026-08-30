@@ -8,8 +8,8 @@ export const siteConfig = {
   url: "https://www.pushingpressure.co.uk",
   phone: "+44 7376 747629",
   phoneHref: "tel:+447376747629",
-  email: "info@pushingpressureltd.com",
-  emailHref: "mailto:info@pushingpressureltd.com",
+  email: "pushingpressureltd@outlook.com",
+  emailHref: "mailto:pushingpressureltd@outlook.com",
   hours: [
     { days: "Monday – Saturday", time: "7:00am – 6:00pm" },
     { days: "Sunday", time: "Closed" },

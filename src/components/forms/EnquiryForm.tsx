@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, Loader2, TriangleAlert } from "lucide-react";
 import { services } from "@/lib/services-data";
 import { cn } from "@/lib/cn";
@@ -58,14 +59,25 @@ export function EnquiryForm({ variant = "quote" }: { variant?: Variant }) {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-2xl border border-lime-200 bg-lime-50 p-10 text-center">
-        <CheckCircle2 className="size-10 text-lime-600" />
+      <motion.div
+        initial={{ opacity: 0, y: 12, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+        className="flex flex-col items-center gap-3 rounded-2xl border border-lime-200 bg-lime-50 p-10 text-center"
+      >
+        <motion.span
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.15, ease: [0.34, 1.56, 0.64, 1] }}
+        >
+          <CheckCircle2 className="size-10 text-lime-600" />
+        </motion.span>
         <h3 className="text-xl font-semibold text-ink-900">Thanks — your message is on its way</h3>
         <p className="max-w-sm text-sm text-ink-500">
           We&apos;ll be in touch shortly. If your enquiry is urgent, feel free to call or WhatsApp
           us directly.
         </p>
-      </div>
+      </motion.div>
     );
   }
 
@@ -166,12 +178,20 @@ export function EnquiryForm({ variant = "quote" }: { variant?: Variant }) {
         />
       </Field>
 
-      {status === "error" ? (
-        <div className="flex items-start gap-2.5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-          <TriangleAlert className="mt-0.5 size-4 shrink-0" />
-          {errorMessage}
-        </div>
-      ) : null}
+      <AnimatePresence>
+        {status === "error" ? (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="flex items-start gap-2.5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700"
+          >
+            <TriangleAlert className="mt-0.5 size-4 shrink-0" />
+            {errorMessage}
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
 
       <button
         type="submit"

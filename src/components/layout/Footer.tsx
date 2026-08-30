@@ -26,7 +26,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Pushing Pressure on Facebook"
-                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-colors hover:border-lime-300/50 hover:text-lime-300"
+                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:text-lime-300 active:scale-90 active:duration-150"
               >
                 <FacebookIcon className="size-4" />
               </a>
@@ -35,7 +35,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Pushing Pressure on Instagram"
-                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-colors hover:border-lime-300/50 hover:text-lime-300"
+                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:text-lime-300 active:scale-90 active:duration-150"
               >
                 <InstagramIcon className="size-4" />
               </a>
