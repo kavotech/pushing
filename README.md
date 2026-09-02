@@ -67,18 +67,45 @@ Everything below is a clearly-marked, professional placeholder — replace it be
 
 ## Contact form / email delivery
 
-`src/app/api/enquiry/route.ts` validates and (optionally) emails every quote/contact
-submission via [Resend](https://resend.com)'s HTTP API — no SDK dependency, just `fetch`.
+`src/app/api/enquiry/route.ts` validates every quote/contact submission, verifies it with
+reCAPTCHA v3, then sends two emails via [Resend](https://resend.com) (`src/lib/resend.ts`,
+using the official `resend` SDK):
 
-Without configuration, submissions are still accepted (the user sees the normal success
-state) but are only written to the server log, so **nothing is lost — but nothing is emailed
-either.** Set these environment variables (e.g. in a `.env.local` file, or your host's
+- An **admin notification** to `CONTACT_TO_EMAIL`, addressed to Mr. YOHOU, Jeff, with the
+  submitted details and `reply_to` set to the customer's email.
+- A **customer confirmation** back to whoever submitted the form, summarising what they sent
+  and giving them a direct phone number for anything urgent. This one is best-effort — if it
+  fails, the request still succeeds, since the enquiry has already reached the business via
+  the admin email.
+
+Without `RESEND_API_KEY` configured, submissions are still accepted (the user sees the normal
+success state) but are only written to the server log, so **nothing is lost — but nothing is
+emailed either.** Set these environment variables (e.g. in a `.env.local` file, or your host's
 environment settings) to enable real delivery:
 
 ```bash
 RESEND_API_KEY=re_xxx           # required to actually send email
-CONTACT_TO_EMAIL=info@pushingpressure.co.uk   # defaults to siteConfig.email
-CONTACT_FROM_EMAIL="Pushing Pressure Website <onboarding@resend.dev>"
+CONTACT_TO_EMAIL=pushingpressureltd@outlook.com   # defaults to siteConfig.email
+CONTACT_FROM_EMAIL="Pushing Pressure LTD <no-reply@pushingpressureltd.com>"
+```
+
+**Before this can send from `no-reply@pushingpressureltd.com`**, that domain must be added and
+verified in the Resend dashboard (Domains → Add Domain → add the SPF/DKIM DNS records it
+gives you). Until it's verified, sends from that address will fail — Resend's own sandbox
+address (`onboarding@resend.dev`) works immediately with no setup if you need to test sooner.
+
+### reCAPTCHA v3
+
+`src/lib/recaptcha.ts` verifies a token (obtained client-side in `EnquiryForm.tsx` via
+`grecaptcha.execute`) against Google's `siteverify` endpoint, rejecting submissions that fail
+or score below `0.5`. The v3 script is loaded site-wide in `src/app/layout.tsx`; it shows
+Google's small "protected by reCAPTCHA" badge in the bottom-right corner — that badge must
+stay visible (don't add CSS to hide it) per Google's terms of service unless the same
+disclosure text is shown elsewhere on the page.
+
+```bash
+RECAPTCHA_SECRET_KEY=...              # server-side verification; skipped entirely if unset
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=...    # public — loaded client-side, safe to expose
 ```
 
 ## Design system

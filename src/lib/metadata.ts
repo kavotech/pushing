@@ -16,6 +16,15 @@ export function buildMetadata({ title, description, path = "" }: BuildMetadataAr
     alternates: {
       canonical: url,
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
     openGraph: {
       title,
       description,

@@ -11,6 +11,18 @@ type Status = "idle" | "loading" | "success" | "error";
 
 const propertyTypes = ["Domestic", "Communal / Residential Block", "Estate", "Commercial"];
 
+async function getRecaptchaToken(): Promise<string | undefined> {
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  if (!siteKey || typeof window === "undefined" || !window.grecaptcha) return undefined;
+
+  const grecaptcha = window.grecaptcha;
+  return new Promise((resolve) => {
+    grecaptcha.ready(() => {
+      grecaptcha.execute(siteKey, { action: "submit" }).then(resolve).catch(() => resolve(undefined));
+    });
+  });
+}
+
 export function EnquiryForm({ variant = "quote" }: { variant?: Variant }) {
   const formId = useId();
   const [status, setStatus] = useState<Status>("idle");
@@ -23,6 +35,7 @@ export function EnquiryForm({ variant = "quote" }: { variant?: Variant }) {
 
     const form = event.currentTarget;
     const data = new FormData(form);
+    const recaptchaToken = await getRecaptchaToken();
     const payload = {
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
@@ -32,6 +45,7 @@ export function EnquiryForm({ variant = "quote" }: { variant?: Variant }) {
       service: String(data.get("service") ?? ""),
       message: String(data.get("message") ?? ""),
       formType: variant,
+      recaptchaToken,
     };
 
     try {

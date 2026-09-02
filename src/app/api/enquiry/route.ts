@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { siteConfig } from "@/lib/site-config";
+import { verifyRecaptcha } from "@/lib/recaptcha";
+import { sendAdminNotification, sendCustomerConfirmation } from "@/lib/resend";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -12,6 +13,7 @@ type EnquiryPayload = {
   service?: string;
   message?: string;
   formType?: "quote" | "contact";
+  recaptchaToken?: string;
 };
 
 export async function POST(request: Request) {
@@ -23,7 +25,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { name, email, phone, postcode, propertyType, service, message, formType } = body ?? {};
+  const { name, email, phone, postcode, propertyType, service, message, formType, recaptchaToken } =
+    body ?? {};
 
   if (!name?.trim() || !email?.trim() || !phone?.trim() || !message?.trim()) {
     return NextResponse.json(
@@ -36,61 +39,46 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
   }
 
-  const summary = [
-    `New ${formType === "quote" ? "quote request" : "enquiry"} from the Pushing Pressure website`,
-    "",
-    `Name: ${name.trim()}`,
-    `Email: ${email.trim()}`,
-    `Phone: ${phone.trim()}`,
-    postcode?.trim() ? `Postcode: ${postcode.trim()}` : null,
-    propertyType?.trim() ? `Property type: ${propertyType.trim()}` : null,
-    service?.trim() ? `Service: ${service.trim()}` : null,
-    "",
-    "Message:",
-    message.trim(),
-  ]
-    .filter((line) => line !== null)
-    .join("\n");
-
-  const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_TO_EMAIL || siteConfig.email;
-
-  if (!apiKey) {
-    // No email provider configured yet — log server-side so the submission
-    // isn't lost, but don't claim delivery. Set RESEND_API_KEY and
-    // CONTACT_TO_EMAIL before launch so enquiries reach an inbox.
-    console.log("[enquiry] RESEND_API_KEY not set. Submission received:\n" + summary);
-    return NextResponse.json({ ok: true, delivered: false });
+  const recaptchaOk = await verifyRecaptcha(recaptchaToken);
+  if (!recaptchaOk) {
+    return NextResponse.json(
+      { error: "We couldn't verify your submission. Please try again." },
+      { status: 400 },
+    );
   }
 
-  try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL || "Pushing Pressure Website <onboarding@resend.dev>",
-        to: [toEmail],
-        reply_to: email.trim(),
-        subject: `${formType === "quote" ? "New quote request" : "New website enquiry"} — ${name.trim()}`,
-        text: summary,
-      }),
-    });
+  const details = {
+    name: name.trim(),
+    email: email.trim(),
+    phone: phone.trim(),
+    postcode: postcode?.trim(),
+    propertyType: propertyType?.trim(),
+    service: service?.trim(),
+    message: message.trim(),
+    formType: formType === "quote" ? ("quote" as const) : ("contact" as const),
+  };
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("[enquiry] Resend API error:", errorText);
-      return NextResponse.json(
-        { error: "Something went wrong sending your message. Please call or email us directly." },
-        { status: 502 },
-      );
+  try {
+    const adminResult = await sendAdminNotification(details);
+
+    if (!adminResult.sent) {
+      // No RESEND_API_KEY configured — log server-side so the submission
+      // isn't lost, but don't claim delivery.
+      console.log("[enquiry] RESEND_API_KEY not set. Submission received:", details);
+      return NextResponse.json({ ok: true, delivered: false });
+    }
+
+    // Best-effort courtesy email — the enquiry has already reached the
+    // business at this point, so a failure here shouldn't fail the request.
+    try {
+      await sendCustomerConfirmation(details);
+    } catch (error) {
+      console.error("[enquiry] Failed to send customer confirmation email:", error);
     }
 
     return NextResponse.json({ ok: true, delivered: true });
   } catch (error) {
-    console.error("[enquiry] Failed to send email:", error);
+    console.error("[enquiry] Failed to send admin notification email:", error);
     return NextResponse.json(
       { error: "Something went wrong sending your message. Please call or email us directly." },
       { status: 500 },
