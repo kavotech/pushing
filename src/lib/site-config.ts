@@ -15,8 +15,10 @@ export const siteConfig = {
     { days: "Sunday", time: "Closed" },
   ],
   social: {
-    facebook: "https://www.facebook.com/pushingpressure",
-    instagram: "https://www.instagram.com/pushingpressure",
+    facebook: "https://www.facebook.com/p/Pushing-pressure-Ltd-100093427204478/",
+    instagram: "https://www.instagram.com/pushingpressureltd",
+    youtube: "https://www.youtube.com/@PushingPressureLTD",
+    tiktok: "https://www.tiktok.com/@pushingpressureltd",
   },
   serviceAreas: ["London", "Surrey", "Essex", "Kent"],
 } as const;

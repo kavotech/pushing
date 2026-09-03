@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/shared/Container";
 import { Logo } from "@/components/shared/Logo";
-import { FacebookIcon, InstagramIcon } from "@/components/shared/SocialIcons";
+import { FacebookIcon, InstagramIcon, TiktokIcon, YoutubeIcon } from "@/components/shared/SocialIcons";
 import { services } from "@/lib/services-data";
 import { areas } from "@/lib/areas-data";
 import { siteConfig } from "@/lib/site-config";
@@ -38,6 +38,24 @@ export function Footer() {
                 className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:text-lime-300 active:scale-90 active:duration-150"
               >
                 <InstagramIcon className="size-4" />
+              </a>
+              <a
+                href={siteConfig.social.youtube}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Pushing Pressure on YouTube"
+                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:text-lime-300 active:scale-90 active:duration-150"
+              >
+                <YoutubeIcon className="size-4" />
+              </a>
+              <a
+                href={siteConfig.social.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Pushing Pressure on TikTok"
+                className="focus-ring-dark inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-300/50 hover:text-lime-300 active:scale-90 active:duration-150"
+              >
+                <TiktokIcon className="size-4" />
               </a>
             </div>
           </div>

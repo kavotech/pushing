@@ -68,6 +68,7 @@ export function organizationSchema() {
       addressCountry: "GB",
     },
     openingHoursSpecification: openingHoursSpecification(),
+    sameAs: Object.values(siteConfig.social),
   };
 }
 
