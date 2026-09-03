@@ -454,7 +454,7 @@ export const services: Service[] = [
       {
         question: "Can you handle multi-site commercial contracts?",
         answer:
-          "Yes, we work with businesses across London, Surrey, Essex and Kent and can coordinate cleaning across multiple sites on an agreed schedule.",
+          "Yes, we work with businesses across North, West and East London and can coordinate cleaning across multiple sites on an agreed schedule.",
       },
     ],
   },

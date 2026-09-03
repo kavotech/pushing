@@ -13,7 +13,7 @@ export function AreasSection() {
           <SectionHeading
             eyebrow="Where We Work"
             title="Areas We Cover"
-            description="We carry out exterior cleaning across London and the South East, covering domestic, communal, estate and commercial properties throughout the following counties."
+            description="We carry out exterior cleaning across North, West and East London, covering domestic, communal, estate and commercial properties throughout each area."
             tone="light"
           />
         </Reveal>

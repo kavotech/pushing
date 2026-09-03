@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Get A Free Quote",
   description:
-    "Request a free, no-obligation quote from Pushing Pressure LTD for pressure washing, softwashing or exterior cleaning across London, Surrey, Essex and Kent.",
+    "Request a free, no-obligation quote from Pushing Pressure LTD for pressure washing, softwashing or exterior cleaning across North, West and East London.",
   path: "/quote",
 });
 
@@ -71,7 +71,7 @@ export default function QuotePage() {
                 {[
                   "No-obligation, free quotes",
                   "Domestic, communal, estate & commercial",
-                  "London, Surrey, Essex & Kent",
+                  "North, West & East London",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-ink-700">
                     <CheckCircle2 className="size-4 shrink-0 text-blue-500" />

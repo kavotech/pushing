@@ -12,7 +12,7 @@ import { Handshake, MapPinned, ShieldCheck, Wrench } from "lucide-react";
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description:
-    "Pushing Pressure LTD provides professional exterior cleaning solutions for residential, communal, estate and commercial properties across London and the South East.",
+    "Pushing Pressure LTD provides professional exterior cleaning solutions for residential, communal, estate and commercial properties across North, West and East London.",
   path: "/about",
 });
 
@@ -39,7 +39,7 @@ const values = [
     icon: MapPinned,
     title: "Genuine regional coverage",
     description:
-      "One team working across London, Surrey, Essex and Kent — useful whether you manage one property or several.",
+      "One team working across North, West and East London — useful whether you manage one property or several.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Pushing Pressure"
         title="Professional exterior cleaning, done properly"
-        description="Pushing Pressure LTD provides professional exterior cleaning solutions for residential, communal, estate and commercial properties across London and the South East."
+        description="Pushing Pressure LTD provides professional exterior cleaning solutions for residential, communal, estate and commercial properties across North, West and East London."
         photo={photos.patioPressureWashAction}
         breadcrumb={[{ label: "About" }]}
       />
@@ -120,8 +120,8 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Where We Work"
-              title="Covering London, Surrey, Essex & Kent"
-              description="We take on domestic, communal, estate and commercial work throughout these four counties, with the flexibility to travel further for larger estate and commercial contracts."
+              title="Covering North, West & East London"
+              description="We take on domestic, communal, estate and commercial work across all three areas, with the flexibility to travel further for larger estate and commercial contracts."
               tone="light"
             />
           </Reveal>

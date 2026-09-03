@@ -8,7 +8,7 @@ import { photos } from "@/lib/photos-data";
 
 export function CTASection({
   title = "Ready to bring your property back to its best?",
-  description = "Get a free, no-obligation quote for pressure washing, softwashing or exterior cleaning anywhere across London, Surrey, Essex or Kent.",
+  description = "Get a free, no-obligation quote for pressure washing, softwashing or exterior cleaning anywhere across North, West or East London.",
 }: {
   title?: string;
   description?: string;

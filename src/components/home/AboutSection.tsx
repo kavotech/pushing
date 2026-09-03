@@ -9,7 +9,7 @@ import { photos } from "@/lib/photos-data";
 const points = [
   "Domestic, communal, estate and commercial properties",
   "Pressure washing and softwashing, matched to the surface",
-  "Coverage across London, Surrey, Essex and Kent",
+  "Coverage across North, West and East London",
   "Straightforward quotes and clear communication throughout",
 ];
 
@@ -26,8 +26,8 @@ export function AboutSection() {
           <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-500 sm:text-lg">
             <p>
               Pushing Pressure LTD provides professional exterior cleaning solutions for
-              residential, communal, estate and commercial properties across London and the
-              South East.
+              residential, communal, estate and commercial properties across North, West and
+              East London.
             </p>
             <p>
               We take the time to understand each property before we start work, matching the
@@ -66,7 +66,7 @@ export function AboutSection() {
                 Service Areas
               </p>
               <p className="mt-1 text-lg font-semibold text-white">
-                London · Surrey · Essex · Kent
+                North · West · East London
               </p>
             </div>
           </div>

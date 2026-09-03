@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Pushing Pressure LTD | Pressure Washing & Cleaning Service",
   description:
-    "Professional exterior cleaning for homes, estates, communal areas and commercial properties across London, Surrey, Essex and Kent. Get a free quote today.",
+    "Professional exterior cleaning for homes, estates, communal areas and commercial properties across North, West and East London. Get a free quote today.",
   path: "/",
 });
 

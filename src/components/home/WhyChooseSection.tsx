@@ -23,7 +23,7 @@ const reasons = [
   },
   {
     title: "Regional Coverage",
-    description: "One team across London, Surrey, Essex and Kent.",
+    description: "One team across North, West and East London.",
   },
   {
     title: "Careful, Tidy Work",

@@ -13,7 +13,7 @@ import type { Surface } from "@/components/shared/MediaPanel";
 export const metadata: Metadata = buildMetadata({
   title: "Projects & Gallery",
   description:
-    "Real project photos plus before and after examples of pressure washing, softwashing and exterior cleaning work from Pushing Pressure LTD across London, Surrey, Essex and Kent.",
+    "Real project photos plus before and after examples of pressure washing, softwashing and exterior cleaning work from Pushing Pressure LTD across North, West and East London.",
   path: "/gallery",
 });
 
@@ -40,7 +40,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Projects & Gallery"
         title="See the results for yourself"
-        description="Real project photos from across London, Surrey, Essex and Kent, plus example transformations below."
+        description="Real project photos from across North, West and East London, plus example transformations below."
         photo={photos.drivewayAfter}
         breadcrumb={[{ label: "Gallery" }]}
       />

@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us",
   description:
-    "Get in touch with Pushing Pressure LTD for professional exterior cleaning across London, Surrey, Essex and Kent.",
+    "Get in touch with Pushing Pressure LTD for professional exterior cleaning across North, West and East London.",
   path: "/contact",
 });
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
 
               <ContactCard icon={MapPin} title="Where we work">
                 <p className="text-sm text-ink-500">
-                  Covering London, Surrey, Essex and Kent for domestic, communal, estate and
+                  Covering North, West and East London for domestic, communal, estate and
                   commercial exterior cleaning.
                 </p>
               </ContactCard>

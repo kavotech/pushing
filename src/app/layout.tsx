@@ -33,8 +33,9 @@ export const metadata: Metadata = {
     "jetwashing",
     "softwashing",
     "gutter cleaning",
-    "exterior cleaning South East",
-    "commercial cleaning Surrey Essex Kent",
+    "exterior cleaning North London",
+    "commercial cleaning West London",
+    "gutter cleaning East London",
   ],
   openGraph: {
     type: "website",

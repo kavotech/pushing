@@ -47,10 +47,10 @@ export default function OpengraphImage() {
               maxWidth: 980,
             }}
           >
-            Professional Exterior Cleaning Across London &amp; The South East
+            Professional Exterior Cleaning Across London
           </span>
           <span style={{ fontSize: 26, color: "#b8bfc7", maxWidth: 820 }}>
-            {siteConfig.tagline} · London · Surrey · Essex · Kent
+            {siteConfig.tagline} · North · West · East London
           </span>
         </div>
       </div>

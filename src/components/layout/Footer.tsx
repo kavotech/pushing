@@ -129,7 +129,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-blue-400" />
-                Serving London, Surrey, Essex &amp; Kent
+                Serving North, West &amp; East London
               </li>
             </ul>
           </div>

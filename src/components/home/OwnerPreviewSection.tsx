@@ -11,7 +11,7 @@ export function OwnerPreviewSection() {
           <SectionHeading
             eyebrow="A Little About Me"
             title="“A boy from South London with a dream, a pressure washer, and a determination to build something of his own.”"
-            description="From one man with a pressure washer to a fully insured team trusted across London and the South East — here's the story behind Pushing Pressure."
+            description="From one man with a pressure washer to a fully insured team trusted across North, West and East London — here's the story behind Pushing Pressure."
             align="center"
             tone="light"
             className="mx-auto"

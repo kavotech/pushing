@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Exterior Cleaning Services",
   description:
-    "Pressure washing, softwashing, gutter cleaning and more — professional exterior cleaning services for domestic, communal, estate and commercial properties across London and the South East.",
+    "Pressure washing, softwashing, gutter cleaning and more — professional exterior cleaning services for domestic, communal, estate and commercial properties across North, West and East London.",
   path: "/services",
 });
 
@@ -21,7 +21,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title="Exterior cleaning services for every property"
-        description="Seven specialist services covering domestic, communal, estate and commercial properties across London, Surrey, Essex and Kent — each matched to the surface and job at hand."
+        description="Seven specialist services covering domestic, communal, estate and commercial properties across North, West and East London — each matched to the surface and job at hand."
         photo={photos.patioPressureWashAction}
         breadcrumb={[{ label: "Services" }]}
       />

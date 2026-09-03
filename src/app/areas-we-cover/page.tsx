@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Areas We Cover",
   description:
-    "Pushing Pressure LTD provides exterior cleaning across London, Surrey, Essex and Kent — covering domestic, communal, estate and commercial properties.",
+    "Pushing Pressure LTD provides exterior cleaning across North, West and East London — covering domestic, communal, estate and commercial properties.",
   path: "/areas-we-cover",
 });
 
@@ -21,8 +21,8 @@ export default function AreasPage() {
     <>
       <PageHero
         eyebrow="Coverage"
-        title="Areas we cover across London & the South East"
-        description="We carry out pressure washing, softwashing and exterior cleaning across four counties — from city apartment blocks to estate properties and business premises."
+        title="Areas we cover across London"
+        description="We carry out pressure washing, softwashing and exterior cleaning across North, West and East London — from city apartment blocks to estate properties and business premises."
         photo={photos.gardenPatioHose}
         breadcrumb={[{ label: "Areas We Cover" }]}
       />

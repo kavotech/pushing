@@ -1,7 +1,7 @@
 # Pushing Pressure LTD — Website
 
 Production-ready marketing website for **Pushing Pressure LTD**, a pressure washing and
-exterior cleaning company serving London, Surrey, Essex and Kent.
+exterior cleaning company serving North, West and East London.
 
 Built with Next.js (App Router), TypeScript, and Tailwind CSS v4.
 
@@ -28,7 +28,7 @@ npm run lint    # eslint
   (service card + related UI), `forms/` (the quote/contact form), `shared/` (buttons, section
   headings, the `MediaPanel` background system, the before/after slider, etc).
 - `src/lib` — `site-config.ts` (business details & nav), `services-data.ts` (the 7 services),
-  `areas-data.ts` (London/Surrey/Essex/Kent + towns), `schema.ts` (JSON-LD builders).
+  `areas-data.ts` (London/North/West/East London + towns), `schema.ts` (JSON-LD builders).
 - `src/app/api/enquiry/route.ts` — handles both the quote form and the contact form.
 
 Services and areas each have their own dedicated, statically generated page
