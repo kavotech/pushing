@@ -38,7 +38,7 @@ export function Hero() {
             className="mt-6 max-w-xl text-balance text-base leading-relaxed text-ink-100 sm:text-lg"
           >
             Powerful, professional exterior cleaning for homes, estates, communal areas and
-            commercial properties across North, West and East London.
+            commercial properties across South, North, West and East London.
           </motion.p>
 
           <motion.div
