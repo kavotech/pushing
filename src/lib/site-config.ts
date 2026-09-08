@@ -5,7 +5,7 @@ export const siteConfig = {
   legalName: "Pushing Pressure LTD",
   description:
     "Pushing Pressure LTD provides professional exterior cleaning for homes, estates, communal areas and commercial properties across North, West and East London.",
-  url: "https://www.pushingpressure.co.uk",
+  url: "https://www.pushingpressureltd.com",
   phone: "+44 7376 747629",
   phoneHref: "tel:+447376747629",
   email: "pushingpressureltd@outlook.com",

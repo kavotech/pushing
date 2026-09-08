@@ -120,7 +120,7 @@ you don't control DNS.
 
 To verify without DNS:
 1. In [Search Console](https://search.google.com/search-console), add a property using
-   **URL prefix** (not **Domain**) — enter the full URL, e.g. `https://www.pushingpressure.co.uk`.
+   **URL prefix** (not **Domain**) — enter the full URL, e.g. `https://www.pushingpressureltd.com`.
 2. Choose the **HTML tag** method. Google shows a meta tag like
    `<meta name="google-site-verification" content="abc123..." />` — copy just the `content`
    value.
