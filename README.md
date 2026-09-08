@@ -108,6 +108,31 @@ RECAPTCHA_SECRET_KEY=...              # server-side verification; skipped entire
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY=...    # public — loaded client-side, safe to expose
 ```
 
+## Google Search Console verification (no DNS access needed)
+
+`src/app/layout.tsx` reads `GOOGLE_SITE_VERIFICATION` and, if set, renders it as a
+`<meta name="google-site-verification">` tag on every page. This is the **HTML tag**
+verification method, which only needs a code pasted into an env var — no DNS record.
+
+Two verification methods need DNS (a TXT record) and won't work without registrar access:
+**Domain** properties, and the **DNS record** method on a URL-prefix property. Avoid both if
+you don't control DNS.
+
+To verify without DNS:
+1. In [Search Console](https://search.google.com/search-console), add a property using
+   **URL prefix** (not **Domain**) — enter the full URL, e.g. `https://www.pushingpressure.co.uk`.
+2. Choose the **HTML tag** method. Google shows a meta tag like
+   `<meta name="google-site-verification" content="abc123..." />` — copy just the `content`
+   value.
+3. Set `GOOGLE_SITE_VERIFICATION=abc123...` as an environment variable (in `.env.local` for
+   local testing, and in your host's environment settings for production) and redeploy.
+4. Click Verify in Search Console.
+5. Go to **Sitemaps** in the sidebar and submit `sitemap.xml`.
+
+An **HTML file upload** option also exists on the same screen (no DNS either) if you'd rather
+not use an env var — drop the file Google gives you straight into `public/` and it's served
+as-is at the site root.
+
 ## Design system
 
 - **Colours**: white/light-grey page body, deep navy (`ink-*`) for the header-adjacent hero,
