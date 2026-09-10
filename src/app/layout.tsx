@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "jetwashing",
     "softwashing",
     "gutter cleaning",
+    "driveway cleaning South London",
     "exterior cleaning North London",
     "commercial cleaning West London",
     "gutter cleaning East London",

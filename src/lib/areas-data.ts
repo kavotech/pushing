@@ -8,13 +8,13 @@ export type AreaInfo = {
 
 export const areas: AreaInfo[] = [
   {
-    slug: "london",
-    name: "London",
+    slug: "south-london",
+    name: "South London",
     summary:
-      "Exterior cleaning across Greater London, from period terraces to commercial premises and managed apartment blocks.",
+      "Exterior cleaning across South London, from period terraces to riverside developments and commercial premises.",
     description: [
-      "We provide pressure washing, softwashing and communal cleaning services across Greater London, working on everything from period terraces and townhouses to modern apartment developments and commercial premises.",
-      "London properties bring their own challenges — from tight access on terraced streets to managing communal areas across busy residential blocks — and our approach is adapted to suit dense, urban environments.",
+      "South London's mix of Victorian terraces, converted flats, riverside developments and commercial premises means every property needs a tailored approach, and we bring the right combination of pressure washing and softwashing to match.",
+      "We work with homeowners, managing agents and commercial clients across South London, fitting cleaning programmes around residents, parking and business hours.",
     ],
     towns: [
       "Croydon",

@@ -50,7 +50,7 @@ export default function OpengraphImage() {
             Professional Exterior Cleaning Across London
           </span>
           <span style={{ fontSize: 26, color: "#b8bfc7", maxWidth: 820 }}>
-            {siteConfig.tagline} · North · West · East London
+            {siteConfig.tagline} · South · North · West · East London
           </span>
         </div>
       </div>

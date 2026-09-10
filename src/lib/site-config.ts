@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Pressure Washing & Cleaning Service",
   legalName: "Pushing Pressure LTD",
   description:
-    "Pushing Pressure LTD provides professional exterior cleaning for homes, estates, communal areas and commercial properties across North, West and East London.",
+    "Pushing Pressure LTD provides professional exterior cleaning for homes, estates, communal areas and commercial properties across South, North, West and East London.",
   url: "https://www.pushingpressureltd.com",
   phone: "+44 7376 747629",
   phoneHref: "tel:+447376747629",
@@ -20,7 +20,7 @@ export const siteConfig = {
     youtube: "https://www.youtube.com/@PushingPressureLTD",
     tiktok: "https://www.tiktok.com/@pushingpressureltd",
   },
-  serviceAreas: ["London", "North London", "West London", "East London"],
+  serviceAreas: ["London", "South London", "North London", "West London", "East London"],
 } as const;
 
 export type NavLink = {

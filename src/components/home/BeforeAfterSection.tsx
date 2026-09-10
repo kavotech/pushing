@@ -13,7 +13,7 @@ export function BeforeAfterSection() {
           <SectionHeading
             eyebrow="See The Difference"
             title="Before & After"
-            description="Drag the slider to see real results from recent jobs across North, West and East London."
+            description="Drag the slider to see real results from recent jobs across South, North, West and East London."
             tone="light"
           />
         </Reveal>
